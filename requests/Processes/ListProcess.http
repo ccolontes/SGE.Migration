@@ -1,0 +1,4 @@
+GET {{host}}/Process/processes
+Content-Type: application/json
+Authorization: Bearer {{token}}
+

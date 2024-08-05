@@ -1,0 +1,7 @@
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.6.1",
+  "title": "A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Name.",
+  "status": 500,
+  "detail": "A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Processes.Procedures.Name.",
+  "traceId": "00-3b2a919513c712c981fb1875b679fa36-cc81aecec00dac48-00"
+}

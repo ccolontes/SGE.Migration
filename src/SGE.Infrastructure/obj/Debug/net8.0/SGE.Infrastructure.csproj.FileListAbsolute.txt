@@ -1,0 +1,17 @@
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.AssemblyInfo.cs
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\bin\Debug\net8.0\SGE.Infrastructure.deps.json
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\bin\Debug\net8.0\SGE.Infrastructure.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\bin\Debug\net8.0\SGE.Infrastructure.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\bin\Debug\net8.0\SGE.Application.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\bin\Debug\net8.0\SGE.Domain.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\bin\Debug\net8.0\SGE.Application.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\bin\Debug\net8.0\SGE.Domain.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infr.9229B0D7.Up2Date
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\refint\SGE.Infrastructure.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\ref\SGE.Infrastructure.dll

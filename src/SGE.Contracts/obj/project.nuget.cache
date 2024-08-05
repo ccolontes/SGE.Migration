@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4GxjiHNwIX8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Contracts\\SGE.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ingco\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.556\\stylecop.analyzers.1.2.0-beta.556.nupkg.sha512",
+    "C:\\Users\\ingco\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.556\\stylecop.analyzers.unstable.1.2.0.556.nupkg.sha512"
+  ],
+  "logs": []
+}

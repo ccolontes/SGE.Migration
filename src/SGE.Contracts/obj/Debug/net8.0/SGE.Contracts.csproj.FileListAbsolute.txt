@@ -1,0 +1,11 @@
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\bin\Debug\net8.0\SGE.Contracts.deps.json
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\bin\Debug\net8.0\SGE.Contracts.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\bin\Debug\net8.0\SGE.Contracts.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contracts.AssemblyInfoInputs.cache
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contracts.AssemblyInfo.cs
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contracts.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\refint\SGE.Contracts.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contracts.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\ref\SGE.Contracts.dll

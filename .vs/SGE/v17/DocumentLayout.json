@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ingco\\Documents\\code\\SGE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|c:\\users\\ingco\\documents\\code\\sge\\src\\sge.api\\controllers\\processcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|solutionrelative:src\\sge.api\\controllers\\processcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{387688C4-17C9-4BDC-A144-4A53CD73C931}|src\\SGE.Application\\SGE.Application.csproj|c:\\users\\ingco\\documents\\code\\sge\\src\\sge.application\\processes\\queries\\listprocesses\\listprocessesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{387688C4-17C9-4BDC-A144-4A53CD73C931}|src\\SGE.Application\\SGE.Application.csproj|solutionrelative:src\\sge.application\\processes\\queries\\listprocesses\\listprocessesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProcessController.cs",
+              "DocumentMoniker": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\Controllers\\ProcessController.cs",
+              "RelativeDocumentMoniker": "src\\SGE.Api\\Controllers\\ProcessController.cs",
+              "ToolTip": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\Controllers\\ProcessController.cs",
+              "RelativeToolTip": "src\\SGE.Api\\Controllers\\ProcessController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T22:56:46.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListProcessesQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Application\\Processes\\Queries\\ListProcesses\\ListProcessesQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\SGE.Application\\Processes\\Queries\\ListProcesses\\ListProcessesQueryHandler.cs",
+              "ToolTip": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Application\\Processes\\Queries\\ListProcesses\\ListProcessesQueryHandler.cs",
+              "RelativeToolTip": "src\\SGE.Application\\Processes\\Queries\\ListProcesses\\ListProcessesQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T22:22:19.896Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

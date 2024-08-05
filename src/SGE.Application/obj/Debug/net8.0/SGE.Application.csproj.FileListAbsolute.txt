@@ -1,0 +1,15 @@
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.csproj.AssemblyReference.cache
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.AssemblyInfoInputs.cache
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.AssemblyInfo.cs
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.csproj.CoreCompileInputs.cache
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\bin\Debug\net8.0\SGE.Application.deps.json
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\bin\Debug\net8.0\SGE.Application.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\bin\Debug\net8.0\SGE.Application.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\bin\Debug\net8.0\SGE.Domain.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\bin\Debug\net8.0\SGE.Domain.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Appl.2AD58D19.Up2Date
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\refint\SGE.Application.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.pdb
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\ref\SGE.Application.dll
