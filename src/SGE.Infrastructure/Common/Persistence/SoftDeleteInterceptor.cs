@@ -1,10 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-
-using SGE.Domain.Common.Interfaces;
 using SGE.Domain.Common.Interfaces.Persistence;
-using SGE.Domain.Common.Models;
 
 namespace SGE.Infrastructure.Common.Persistence;
 

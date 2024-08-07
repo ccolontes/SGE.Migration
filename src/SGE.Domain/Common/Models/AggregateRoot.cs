@@ -2,21 +2,19 @@ using SGE.Domain.Common.Interfaces.Models;
 
 namespace SGE.Domain.Common.Models;
 
-public abstract class AggregateRoot<TId>(TId id) : Entity<TId>(id)
-    where TId : notnull
+public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
+    where TId : AggregateRootId<TIdType>
 {
-     protected readonly List<IDomainEvent> _domainEvents = [];
+    public new AggregateRootId<TIdType> Id { get; protected set; }
 
-     public void AddDomainEvent(IDomainEvent domainEvent)
-     {
-         _domainEvents.Add(domainEvent);
-     }
-
-     public List<IDomainEvent> PopDomainEvents()
+    protected AggregateRoot(TId id)
     {
-        var copy = _domainEvents.ToList();
-        _domainEvents.Clear();
-
-        return copy;
+        Id = id;
     }
+
+#pragma warning disable CS8618
+    protected AggregateRoot()
+    {
+    }
+#pragma warning restore CS8618
 }

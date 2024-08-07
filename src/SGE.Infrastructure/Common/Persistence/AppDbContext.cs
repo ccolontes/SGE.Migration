@@ -5,8 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 using SGE.Domain.Common;
 using SGE.Domain.DynamicTextAggregate;
+using SGE.Domain.ProcedureAggregate;
 using SGE.Domain.ProcessAggregate;
 using SGE.Domain.Reminders;
+using SGE.Domain.TermAggregate;
 using SGE.Domain.Users;
 using SGE.Infrastructure.Common.Middleware;
 
@@ -22,6 +24,7 @@ public class AppDbContext(DbContextOptions options, IHttpContextAccessor _httpCo
 
     public DbSet<DynamicText> DynamicTexts { get; set; } = null!;
 
+    public DbSet<Term> Terms { get; set; } = null!;
     public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         var domainEvents = ChangeTracker.Entries<Entity>()
@@ -41,7 +44,6 @@ public class AppDbContext(DbContextOptions options, IHttpContextAccessor _httpCo
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
-
         base.OnModelCreating(modelBuilder);
     }
 

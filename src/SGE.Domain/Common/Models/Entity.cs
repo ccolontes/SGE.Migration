@@ -2,19 +2,24 @@ using SGE.Domain.Common.Interfaces.Models;
 
 namespace SGE.Domain.Common.Models;
 
-public abstract class Entity<TId>(TId id) : IEntity, IEquatable<Entity<TId>>
-    where TId : notnull
+public abstract class Entity<TId> : IEquatable<Entity<TId>>
+    where TId : ValueObject
 {
-    public TId Id { get; protected set; } = id;
+    public TId Id { get; protected set; }
 
-    public bool Equals(Entity<TId>? other)
+    protected Entity(TId id)
     {
-        return Equals((object?)other);
+        Id = id;
     }
 
     public override bool Equals(object? obj)
     {
         return obj is Entity<TId> entity && Id.Equals(entity.Id);
+    }
+
+    public bool Equals(Entity<TId>? other)
+    {
+        return Equals((object?)other);
     }
 
     public static bool operator ==(Entity<TId> left, Entity<TId> right)
@@ -31,4 +36,10 @@ public abstract class Entity<TId>(TId id) : IEntity, IEquatable<Entity<TId>>
     {
         return Id.GetHashCode();
     }
+
+#pragma warning disable CS8618
+    protected Entity()
+    {
+    }
+#pragma warning restore CS8618
 }

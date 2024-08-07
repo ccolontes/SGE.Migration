@@ -1,3 +1,5 @@
+using Mapster;
+
 using MapsterMapper;
 
 using MediatR;

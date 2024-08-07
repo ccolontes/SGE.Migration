@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
+using SGE.Domain.ProcedureAggregate.ValueObjects;
 using SGE.Domain.ProcessAggregate;
 using SGE.Domain.ProcessAggregate.Entities;
+using SGE.Domain.ProcessAggregate.ValueObjects;
 
 namespace SGE.Infrastructure.Processes.Persistence;
 
@@ -14,25 +16,34 @@ public class ProcessConfigurations : IEntityTypeConfiguration<Process>
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Id)
-            .ValueGeneratedNever();
+            .ValueGeneratedNever()
+            .HasConversion(id => id.Value, value => ProcessId.Create(value));
 
         builder.Property(x => x.Name).IsRequired();
 
-        // builder.HasQueryFilter(x => !x.IsDeleted);
-        builder.HasMany(x => x.Procedures).WithMany(x => x.Processes)
-            .UsingEntity<ProcessProcedure>(
-                "ProcessProcedure",
-                l => l.HasOne(x => x.Procedure).WithMany().HasForeignKey(x => x.ProcedureId),
-                r => r.HasOne(x => x.Process).WithMany().HasForeignKey(x => x.ProcessId),
-                j => j.HasData(
-                        new { ProcedureId = "d9a6b405-d552-4792-8ec5-588647ee9b67", ProcessId = "87bd871f-ab3c-46da-81c8-3f1e8dd27dfe" },
-                        new { ProcedureId = "b106bb0d-d2ad-4b56-b644-8fa514c8d3b7", ProcessId = "87bd871f-ab3c-46da-81c8-3f1e8dd27dfe" }));
+        builder.HasQueryFilter(x => !x.IsDeleted);
+
+        builder.OwnsMany(x => x.ProceduresIds, ppb =>
+        {
+            ppb.ToTable("ProcessProcedure");
+
+            ppb.WithOwner().HasForeignKey("ProcessId");
+
+            ppb.HasKey("Id", "ProcessId");
+
+            ppb.Property(p => p.Value)
+                .HasColumnName("ProcessProcedureId")
+                .ValueGeneratedNever();
+        });
+
+        builder.Metadata.FindNavigation(nameof(Process.ProceduresIds))!
+            .SetPropertyAccessMode(PropertyAccessMode.Field);
 
         ApplySeeders(builder);
     }
 
     private void ApplySeeders(EntityTypeBuilder<Process> builder)
     {
-        builder.HasData(Process.Create("87bd871f-ab3c-46da-81c8-3f1e8dd27dfe", "Televisión"));
+        builder.HasData(Process.Create(Guid.Parse("8f335e81-a531-4276-9ec9-e31497b437e7"), "Televisión"));
     }
 }

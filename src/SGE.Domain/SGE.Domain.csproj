@@ -14,8 +14,4 @@
     <PackageReference Include="Ulid" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ProcessAggregate\ValueObjects\" />
-  </ItemGroup>
-
 </Project>

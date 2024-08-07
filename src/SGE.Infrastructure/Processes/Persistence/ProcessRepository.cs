@@ -10,6 +10,6 @@ public class ProcessRepository(AppDbContext context) : IProcessRepository
 {
     public async Task<List<Process>> ListAsync(CancellationToken cancellationToken)
     {
-        return await context.Processes.Include(x => x.Procedures).AsNoTracking().ToListAsync(cancellationToken);
+        return await context.Processes.AsNoTracking().ToListAsync(cancellationToken);
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rs4p53+TC9CSVbtzeBXDOaOS7Bs7WA6s500bKgIhboWP8q2tIUNiDBM5p+8SEqWjho1B9KcRz3FPr2s2ikPfYw==",
+  "dgSpecHash": "UhxS5oiymX8tlXUlJ4EFT4/uOkN4h9hAJCRj1CEwypV3YeVBdd2ToQwf6r/iaQFXHxgQTst3ChyO97Qz/ylRpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ingco\\Documents\\code\\SGE\\tests\\SGE.Api.IntegrationTests\\SGE.Api.IntegrationTests.csproj",
   "expectedPackageFiles": [

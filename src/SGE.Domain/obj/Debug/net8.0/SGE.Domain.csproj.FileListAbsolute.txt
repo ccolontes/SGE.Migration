@@ -10,3 +10,4 @@ C:\Users\ingco\Documents\code\SGE\src\SGE.Domain\obj\Debug\net8.0\SGE.Domain.dll
 C:\Users\ingco\Documents\code\SGE\src\SGE.Domain\obj\Debug\net8.0\refint\SGE.Domain.dll
 C:\Users\ingco\Documents\code\SGE\src\SGE.Domain\obj\Debug\net8.0\SGE.Domain.pdb
 C:\Users\ingco\Documents\code\SGE\src\SGE.Domain\obj\Debug\net8.0\ref\SGE.Domain.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Domain\obj\Debug\net8.0\SGE.Domain.sourcelink.json

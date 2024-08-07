@@ -22,44 +22,23 @@ namespace SGE.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ProcessProcedure", b =>
-                {
-                    b.Property<string>("ProcedureId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ProcessId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("ProcedureId", "ProcessId");
-
-                    b.HasIndex("ProcessId");
-
-                    b.ToTable("ProcessProcedure");
-
-                    b.HasData(
-                        new
-                        {
-                            ProcedureId = "d9a6b405-d552-4792-8ec5-588647ee9b67",
-                            ProcessId = "87bd871f-ab3c-46da-81c8-3f1e8dd27dfe"
-                        },
-                        new
-                        {
-                            ProcedureId = "b106bb0d-d2ad-4b56-b644-8fa514c8d3b7",
-                            ProcessId = "87bd871f-ab3c-46da-81c8-3f1e8dd27dfe"
-                        });
-                });
-
             modelBuilder.Entity("SGE.Domain.DynamicTextAggregate.DynamicText", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<DateTime?>("DeletedOnUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Text")
                         .IsRequired()
@@ -70,2399 +49,2794 @@ namespace SGE.Infrastructure.Migrations
                     b.HasIndex("Code")
                         .IsUnique();
 
-                    b.ToTable("dynamic_texts", (string)null);
+                    b.ToTable("DynamicTexts", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = "01J4G2Z4XTMES54RMY046X2T3M",
+                            Id = new Guid("ec989e36-c15e-4814-b718-a692a36d25e4"),
                             Code = "AdvertenciaFlash",
+                            IsDeleted = false,
                             Text = "Para el correcto funcionamiento de la herramienta es necesario actualizar Flash Player"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYWE48H2GFNG828TG",
+                            Id = new Guid("562f21b8-c2ad-4de5-bed8-20498be4d1be"),
                             Code = "AdvertenciaNavegador",
+                            IsDeleted = false,
                             Text = "Te recomendamos usar los siguientes navegadores para que tu experiencia con el SGE sea óptima: <img style='width:16px;vertical-align:text-bottom;' src='/content/images/icons/chrome24.png' alt='Icono del navegador Google Chrome'>Google Chrome V.49 y <img style='width:16px;vertical-align:text-bottom;' src='/content/images/icons/firefox24.png' alt='Icono del navegador Mozilla'>Mozilla Firefox V.42 o versiones superiores."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTEZFMAQYCHCNB4WX0",
+                            Id = new Guid("a8c517a4-a455-4065-baf5-09b77c2fe84a"),
                             Code = "AlertBeforeAdministrativeAnalisisApprobation",
+                            IsDeleted = false,
                             Text = "Señor funcionario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7C636Y1BV3KG7TKA",
+                            Id = new Guid("3b35781e-d0fb-4a55-8318-785d9b1e35fb"),
                             Code = "AlertBeforeClosingApproval",
+                            IsDeleted = false,
                             Text = "Señor funcionario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT0ENDDYAWZDMGZ47D",
+                            Id = new Guid("63e01df9-d970-44ec-a64b-d897034f990e"),
                             Code = "AlertBeforeDeleting",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTVY1AKJ26B4PCMKQ7",
+                            Id = new Guid("b09205b1-16f3-4d1c-bf00-84646a9e1f92"),
                             Code = "AlertBeforeFileDeleting",
+                            IsDeleted = false,
                             Text = "¿Está seguro que desea eliminar este archivo?"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCY6QHWKKKG6CKKA5",
+                            Id = new Guid("81cf1678-fa63-4baa-93bc-28d3b26b7f4e"),
                             Code = "AlertBeforeRadication",
+                            IsDeleted = false,
                             Text = "Señor usuario: tenga en cuenta que una vez radicada la solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3W5NVTK9VFST66GZ",
+                            Id = new Guid("63437fce-5e8e-4b70-919c-e067606317f4"),
                             Code = "AlertBeforeRadicationAdicional",
+                            IsDeleted = false,
                             Text = "Sr. Usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQW51BGNM6K83GX4K",
+                            Id = new Guid("9a2218b0-3efa-495b-9a20-40562d78a1a1"),
                             Code = "AlertBeforeRadicationError",
+                            IsDeleted = false,
                             Text = "Señor operador"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTE6H3SGTE16PH4HCQ",
+                            Id = new Guid("e70ebb13-53f7-4b57-8419-c061710fdb7f"),
                             Code = "AlertBeforeTechnicalAnalisisApprobation",
+                            IsDeleted = false,
                             Text = "Señor funcionario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJ9516VDY5M2Y9T6Y",
+                            Id = new Guid("373ee363-d91f-481e-a6c1-fccae8726ffe"),
                             Code = "AlertConfirmCreateObservation",
+                            IsDeleted = false,
                             Text = "¿Está seguro que desea guardar el cambio?"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTW6G8J010VP8DCZ6D",
+                            Id = new Guid("6889698c-bb0a-4b25-b5cc-e059ff104a0e"),
                             Code = "ApiNotificaciones_Action",
+                            IsDeleted = false,
                             Text = "urn:/#NewOperation"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT5FACPXVMWQQ9YNQ4",
+                            Id = new Guid("bbe1436a-e8f7-49ac-8fe0-afbe0d39f98a"),
                             Code = "ApiNotificaciones_Aplicacion",
+                            IsDeleted = false,
                             Text = "TesAmerica"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTG8TZGJ9AP5CFCD3G",
+                            Id = new Guid("0ee0cd84-2bd6-4acb-852a-2bca331537c5"),
                             Code = "ApiNotificaciones_Clave",
+                            IsDeleted = false,
                             Text = "6ed4a3759c2234bcc9e144151b5d44bc"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTMAS57GEGJNX8JBTQ",
+                            Id = new Guid("2b088d42-88a4-4cf7-9413-b74a86c6407b"),
                             Code = "ApiNotificaciones_PlantillaEmail",
+                            IsDeleted = false,
                             Text = "EmailNotificacion.html"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTWYR0DA47XS902TC5",
+                            Id = new Guid("7f09eff3-2e57-4900-a5de-c3889b3ff72a"),
                             Code = "ApiNotificaciones_TipoMime",
+                            IsDeleted = false,
                             Text = "application/pdf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTC16DT9TDAY8PEY9",
+                            Id = new Guid("f31219d6-f590-407c-83d9-f55203e04808"),
                             Code = "ApiNotificaciones_URIPlantilla",
+                            IsDeleted = false,
                             Text = "TesAmerica.docx"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9FYPFQ9FYK3HQQHY",
+                            Id = new Guid("d39bc0a2-f6e9-4a4a-8831-358b94b15e59"),
                             Code = "ApiNotificaciones_Url",
+                            IsDeleted = false,
                             Text = "https://integratic.mintic.gov.co/Notificaciones/Webservices/SOAP/"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA27867E5ZB3WG9DC",
+                            Id = new Guid("3ead63f0-bcd9-4b05-9e62-36436cdb7c08"),
                             Code = "ApiNotificaciones_Usuario",
+                            IsDeleted = false,
                             Text = "20231218-163125-18a4c0-17460376"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXQWYMWHRP3SW30ZH",
+                            Id = new Guid("a8a1205c-81b9-4a13-aed7-bd5a56fe4eb4"),
                             Code = "ApproveAdministrativeAnalisisCdDestino",
+                            IsDeleted = false,
                             Text = "311"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTD43V16FXCY12VY8D",
+                            Id = new Guid("757cc7c0-b8c3-41f8-b973-01f5a09a6c96"),
                             Code = "ApproveAdministrativeAnalisisNaturaleza",
+                            IsDeleted = false,
                             Text = "770"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT23CVHPCEDKDTB1VT",
+                            Id = new Guid("40f954ff-8d14-4f9c-a3be-2be51f785012"),
                             Code = "ApproveAdministrativeAnalisisSerieDocumental",
+                            IsDeleted = false,
                             Text = "Serie Documental"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQBT6XVTYGM25NXMX",
+                            Id = new Guid("2652bea8-84f9-448c-864d-9ffc13aa62c9"),
                             Code = "ApproveAdministrativeAnalisisWfTipo",
+                            IsDeleted = false,
                             Text = "0"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTR96D982HW27BKYRJ",
+                            Id = new Guid("3cc05630-1886-4bb6-9328-05ebcf4a63aa"),
                             Code = "ApproveTechnicalAnalisisCdDestino",
+                            IsDeleted = false,
                             Text = "311"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT665FG0G2H2YFW5F7",
+                            Id = new Guid("b6bd8454-1a80-49d4-aaf4-7ba0d874322c"),
                             Code = "ApproveTechnicalAnalisisNaturaleza",
+                            IsDeleted = false,
                             Text = "770"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT8ZZYJ04KQY97NDW3",
+                            Id = new Guid("d4c487cb-4d64-4bd9-96f8-b4993d73d654"),
                             Code = "ApproveTechnicalAnalisisSerieDocumental",
+                            IsDeleted = false,
                             Text = "Serie Documental"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTDYHKQZMH8SC462B",
+                            Id = new Guid("6c46a96f-9199-4c10-a21b-a2b0f85f86bf"),
                             Code = "ApproveTechnicalAnalisisWfTipo",
+                            IsDeleted = false,
                             Text = "0"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT60F36W0HMNNBW32A",
+                            Id = new Guid("8236e1f6-ca2b-404a-941c-fd0f64521566"),
                             Code = "AZDigital_Dependencia",
+                            IsDeleted = false,
                             Text = "Pru"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT0YYHG3PPFH5RX7VP",
+                            Id = new Guid("92478b59-a2d0-4349-9dcb-2bb405faef84"),
                             Code = "AZDigital_DependenciaSatelital",
+                            IsDeleted = false,
                             Text = "2.2.0.1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTK7NCNC8FNCYQ82MV",
+                            Id = new Guid("0c43c418-8cbf-4b36-ab7a-02cfb4a9693a"),
                             Code = "AZDigital_IdDirectorioConsultaNOPSO",
+                            IsDeleted = false,
                             Text = "24828"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTC0ZJF86201ZXZ1G1",
+                            Id = new Guid("416c7da3-4430-47f8-8553-0d90b7f21ac2"),
                             Code = "AZDigital_IdDirectorioConsultaPSO",
+                            IsDeleted = false,
                             Text = "24828"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZSX7S2GRXZCQ5GC6",
+                            Id = new Guid("2bf4cbb0-3ca0-4b47-b9ee-112c10e8d6e6"),
                             Code = "AZDigital_IdDirectorioRadicadoNOPSO",
+                            IsDeleted = false,
                             Text = "6369"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTMRD04YE01Y1FZTZ3",
+                            Id = new Guid("5e9bec72-b82c-4e37-960e-a79f99cf8642"),
                             Code = "AZDigital_IdDirectorioRadicadoPSO",
+                            IsDeleted = false,
                             Text = "6369"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTFR364ZCWSSRBQ28S",
+                            Id = new Guid("352ca806-7fc2-49cb-986c-5d9150e32698"),
                             Code = "AZDigital_IdDirectorioRadicadoSatelital",
+                            IsDeleted = false,
                             Text = "102235"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT0JEGP2FHPC11AKJ0",
+                            Id = new Guid("c5ca40ae-f462-4310-9eac-f3d163c093ef"),
                             Code = "AZDigital_Resoluciones_Dependencia",
+                            IsDeleted = false,
                             Text = "100"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9MV4AXECBYYMH0PW",
+                            Id = new Guid("29cd6d2d-f07a-45cd-8ea7-87ec9fe45580"),
                             Code = "AZDigital_Resoluciones_ProcedeRecurso",
+                            IsDeleted = false,
                             Text = "Rep10"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTNRP979AE0QJRSFK9",
+                            Id = new Guid("5ff56876-1b61-4d40-a3ad-fb88596dc10d"),
                             Code = "AZDigital_Resoluciones_TipoActo",
+                            IsDeleted = false,
                             Text = "R"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4NH9VKJ7BWBKY4F7",
+                            Id = new Guid("f5fe911e-c811-470b-83c4-405fd1b02057"),
                             Code = "AZDigital_Resoluciones_TipoNotificacionCorreo",
+                            IsDeleted = false,
                             Text = "CE"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTBQ8A49EHJVSG4PDK",
+                            Id = new Guid("576f57c3-0b13-4a06-9572-83decf3ae1d2"),
                             Code = "AZDigital_Resoluciones_TipoNotificacionFisico",
+                            IsDeleted = false,
                             Text = "P"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTB3AP8MK8MTZ1PSQM",
+                            Id = new Guid("8a302bc0-a5e4-46ea-a117-2e529437c627"),
                             Code = "AZDigital_Resoluciones_UsuarioFirmante",
+                            IsDeleted = false,
                             Text = "nalmeyda"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTH0C2ZKRVT36W4A3",
+                            Id = new Guid("63a40e2d-067f-4916-a188-62ad54a8b5e2"),
                             Code = "AZDigital_Resoluciones_UsuarioFirmante_EyS",
+                            IsDeleted = false,
                             Text = "svaldes"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSRYT63MEYWT9YA9A",
+                            Id = new Guid("075c8bd8-42e9-4453-b12a-816be81b6d32"),
                             Code = "AZDigital_Resoluciones_UsuarioFirmante_Satelital",
+                            IsDeleted = false,
                             Text = "nalmeyda"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHGDY44WKBJQ72RT2",
+                            Id = new Guid("0e535b3a-bd60-4c57-ac47-d6b29e0606d0"),
                             Code = "AZDigital_Resoluciones_UsuarioFirmanteDir_EspTemp",
+                            IsDeleted = false,
                             Text = "nalmeyda"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJDQW0DE9M44831M2",
+                            Id = new Guid("403ce8d3-e03f-4320-8366-7b69f97ed8a7"),
                             Code = "AZDigital_Resoluciones_UsuarioFirmanteVice_EspTemp",
+                            IsDeleted = false,
                             Text = "svaldes"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT59Y9X3Q7RV5T3Q0J",
+                            Id = new Guid("dc047d41-0b57-4caf-96af-21a7636450c2"),
                             Code = "AZDigital_Sitio",
+                            IsDeleted = false,
                             Text = "Prue"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZS8TK1TWP7CXX895",
+                            Id = new Guid("5bce34f8-c3e9-4ef9-a862-9d3c7cc973d0"),
                             Code = "AZDigital_SitioSatelital",
+                            IsDeleted = false,
                             Text = "TL"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTG3ECWRRNFG5JC2BF",
+                            Id = new Guid("1e1c8e1d-1254-428a-bf90-5ff4e7f23f5b"),
                             Code = "AZDigital_TramiteRadicado",
+                            IsDeleted = false,
                             Text = "PQRSD"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHKBC8TN5VAPB05GW",
+                            Id = new Guid("822adda4-dada-41c4-8c6d-e02378a38778"),
                             Code = "AZDigital_TramiteRadicadoSatelital",
+                            IsDeleted = false,
                             Text = "PQRSD"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTR00F02MNW456NFXN",
+                            Id = new Guid("f2fe3369-dc4a-4ec4-81f7-a11652788ce0"),
                             Code = "AZDigital_TramiteRegistro",
+                            IsDeleted = false,
                             Text = "rs"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTS7X0DRNJTYG8KC3N",
+                            Id = new Guid("ecbacb06-fca4-410a-84e7-9bf230379f8b"),
                             Code = "AZDigital_TramiteRegistroSatelital",
+                            IsDeleted = false,
                             Text = "RPTA_S"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYT08PY9082X2KKBW",
+                            Id = new Guid("89759cdf-71aa-4baa-991c-6b16ce05637c"),
                             Code = "BDU_Clase",
+                            IsDeleted = false,
                             Text = "92"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTAPS1JBHEP0DF881G",
+                            Id = new Guid("e0ba0a45-fd55-4d07-a603-a7d2bce5040d"),
                             Code = "CausaRechazoNOSubsanar",
+                            IsDeleted = false,
                             Text = "No cumplir con lo establecido en el numeral 1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT12ZDA85CNNC5P8G5",
+                            Id = new Guid("2dc8f1bc-0340-454b-a190-336100bb389f"),
                             Code = "CertificacionCarteraTextoFirma",
+                            IsDeleted = false,
                             Text = "Coordinadora GIT de Cartera"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTE2AAD2CNQ77D9SNP",
+                            Id = new Guid("d665ad7a-cd42-4b9d-8ab5-41f8433cf8d6"),
                             Code = "CertificacionGarantiasTextoFirma",
+                            IsDeleted = false,
                             Text = "Coordinador GIT de Gestión de Garantías"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1FS71ZTPGNFFNK9J",
+                            Id = new Guid("eb0fdcc8-09f6-4596-962d-09f6e2f46571"),
                             Code = "CityCodeAne",
+                            IsDeleted = false,
                             Text = "11001"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTD9RWCA8NGEWGM2S",
+                            Id = new Guid("a1c24253-2c03-4375-9dc9-5390f783145a"),
                             Code = "CityCodeMintic",
+                            IsDeleted = false,
                             Text = "11001"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYQFAEPF893DBJJAQ",
+                            Id = new Guid("ef9f62ec-6b4a-41e9-bf24-30981c71d45e"),
                             Code = "Clases_Expedientes_Industria",
+                            IsDeleted = false,
                             Text = "97,95,20"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCBM0X3KSJJQPB885",
+                            Id = new Guid("b6840488-1e15-4966-802b-e050e4aa117c"),
                             Code = "Clases_Expedientes_Satelital",
+                            IsDeleted = false,
                             Text = "92"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9BBB6WYPAY1HFM39",
+                            Id = new Guid("ffa58477-e636-40b4-a6c1-c2bb44e415ff"),
                             Code = "ClasesExpedienteRTIC",
+                            IsDeleted = false,
                             Text = "96,81,83,84,86,87,88,89"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTWVEQ20D7ZDXDJ82C",
+                            Id = new Guid("45764874-8e42-4d81-8f42-8db07de4c5f9"),
                             Code = "CodigoDestinoAne",
+                            IsDeleted = false,
                             Text = "pru001"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT5PNF73RZM86FJXBD",
+                            Id = new Guid("478503aa-5d10-45c2-a34c-b4b1612863f2"),
                             Code = "CodigoDestinoMintic",
+                            IsDeleted = false,
                             Text = "pru001"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT92D9F7W1YN31BB16",
+                            Id = new Guid("505131c2-2fea-495b-be34-6a24c45c44bf"),
                             Code = "Columna_Potencia_BB",
+                            IsDeleted = false,
                             Text = "R"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7QSGQYVDZ3CT1WSZ",
+                            Id = new Guid("ce269e58-c873-4514-bc0e-fe9546e6d489"),
                             Code = "CoordinadorPSO",
+                            IsDeleted = false,
                             Text = "ogarzon"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTPGV856GZY4SJPQF6",
+                            Id = new Guid("a29c6468-51b4-4534-89c5-6760cd0ee28e"),
                             Code = "CorreoAprobacionANE-MINTIC_Satelital",
+                            IsDeleted = false,
                             Text = "solicitudessatelital@g.com,Paola@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXYS0T7V2C98FS24Y",
+                            Id = new Guid("5be38bc4-9acb-40fd-bc3a-20567d4b0f70"),
                             Code = "CorreoAprobacionMinTIC",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT84QGCSMKVJQRR1WQ",
+                            Id = new Guid("52d277fb-059d-4680-8cd8-e0e1b9a042cc"),
                             Code = "CorreoAprobacionMINTIC-ANE_Satelital",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6KTG69ZG3E0ECBKH",
+                            Id = new Guid("b505d18b-e0d0-433f-92e9-68920dc48612"),
                             Code = "CorreoAprobacionResolucionRevisor5",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA1BTZRSFN9FH44QH",
+                            Id = new Guid("36333c7e-4900-4a92-a569-2065f3eacf22"),
                             Code = "CorreoCertificadoAplicacion",
+                            IsDeleted = false,
                             Text = "TesAmerica"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6QDHADZH5JTYB2KB",
+                            Id = new Guid("36640bb0-3e07-432e-823e-da3226768893"),
                             Code = "CorreoCertificadoCanalesAsunto",
+                            IsDeleted = false,
                             Text = "Prueba Email Servicio Notificaciones"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSE43TBWPH8R5MWQS",
+                            Id = new Guid("c090d029-3089-4fcd-8a80-005193dff504"),
                             Code = "CorreoCertificadoCanalesEmailCertificado",
+                            IsDeleted = false,
                             Text = "1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCNRG8BVWKXN67XKZ",
+                            Id = new Guid("c1f0cb39-ae1a-41fd-b6ca-718bffe5e808"),
                             Code = "CorreoCertificadoCanalesMensaje",
+                            IsDeleted = false,
                             Text = "Mensaje del Email Pruebas"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTT8C6MJMGMNZ7TF66",
+                            Id = new Guid("9efaae82-bee9-432a-9677-69986a47d8eb"),
                             Code = "CorreoCertificadoCanalesMerge",
+                            IsDeleted = false,
                             Text = "0"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTPJZ4SRC891E4Y7F",
+                            Id = new Guid("d7a5afa3-221b-4920-b689-15e8b056a8b3"),
                             Code = "CorreoCertificadoCanalesPlantillaEmail",
+                            IsDeleted = false,
                             Text = "EmailNotificacion.html"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7P0K5CA08WXGERP3",
+                            Id = new Guid("25d6d8d1-5c04-4099-863d-1945bb62d672"),
                             Code = "CorreoCertificadoContraseña",
+                            IsDeleted = false,
                             Text = "2eca78d9b47f82705c9bbc5efe71cd95"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4TJFVTXPBS08C8JY",
+                            Id = new Guid("1a336ce1-be54-4ee0-b9af-51213294a576"),
                             Code = "CorreoCertificadoDocumentosCodificacion",
+                            IsDeleted = false,
                             Text = "Base64"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYZTB1MHJ800PWEZC",
+                            Id = new Guid("18bb0547-f433-474c-8834-60ce91277dee"),
                             Code = "CorreoCertificadoDocumentosMerge",
+                            IsDeleted = false,
                             Text = "0"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTEMKVQBRX7FHK798B",
+                            Id = new Guid("760c5660-0ae7-4552-9b23-879cc1ad9183"),
                             Code = "CorreoCertificadoDocumentosTipoMime",
+                            IsDeleted = false,
                             Text = "application/pdf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT0ABRJYXT5ZSYRHKH",
+                            Id = new Guid("b4c518e2-9faa-4551-ab37-3ba05d2658e7"),
                             Code = "CorreoCertificadoRemitenteCargo",
+                            IsDeleted = false,
                             Text = "Representante Legal"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTVY9TNWZ721NBR7Y",
+                            Id = new Guid("3410dad8-d0d1-46d6-9b88-cf3b03cc36f4"),
                             Code = "CorreoCertificadoRemitenteDireccion",
+                            IsDeleted = false,
                             Text = "Casa 1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA41R8B4HSD2624E8",
+                            Id = new Guid("66b91df8-b3d8-4eea-b9c7-a0de24603363"),
                             Code = "CorreoCertificadoRemitenteEmail",
+                            IsDeleted = false,
                             Text = "silvia.mesino@analitica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6FPRJ32RJJR7EP50",
+                            Id = new Guid("aef2274f-35c2-4e85-951d-ece054efe967"),
                             Code = "CorreoCertificadoRemitenteNombre",
+                            IsDeleted = false,
                             Text = "Andres Rodriguez"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT5NKNBTEKGF5ZV9CY",
+                            Id = new Guid("276d957c-eec3-4e4e-a500-30e24e673486"),
                             Code = "CorreoCertificadoUsuario",
+                            IsDeleted = false,
                             Text = "20230922-132449-805237-73089455"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTEH842XY9QS5ABKPJ",
+                            Id = new Guid("840bf545-fc8d-4e0a-9a1a-6682bab2cdb4"),
                             Code = "CorreoCoordinacion_GGCCG",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTNBQFE3X7W4FS92JP",
+                            Id = new Guid("fe3d482d-bfee-40ed-959a-149647d4b9d8"),
                             Code = "CorreoCoordinacion_GGERE",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1QJ7RHT7F6AH03ZQ",
+                            Id = new Guid("9337f439-5418-4bc5-84f4-a4ac1ce925f8"),
                             Code = "CorreoCopiaANE",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT025GAV997C74491F",
+                            Id = new Guid("eba2bd33-993b-4dca-8874-8de6dbed1391"),
                             Code = "CorreoCopiaANE-MINTIC_Satelital",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTE8G7WDASJCPM7C0G",
+                            Id = new Guid("ffffacc6-ac37-44b0-b0a3-c98cc31b2030"),
                             Code = "CorreoCopiaMINTIC-ANE_Satelital",
+                            IsDeleted = false,
                             Text = "solicitudessatelital@g.com,Paola@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQDNY0GQR2ZJJEWGJ",
+                            Id = new Guid("98864882-1f4d-4d40-8d94-9d0b0c83bc00"),
                             Code = "CorreoDesistimientoOperador",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTF7F0H0Y6VZWG83MH",
+                            Id = new Guid("aba26369-6b84-4c8c-82bd-cbfc9926e9c6"),
                             Code = "CorreoDevolucionCT",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHD28Q766CC2BFCGN",
+                            Id = new Guid("12053820-fff8-408d-a0f1-f4061f519a77"),
                             Code = "CorreoDevolucionProceso",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCYEZ0B8S5ZMG2TMB",
+                            Id = new Guid("2ed341f9-2b47-4014-9ab2-2cec5a08c2aa"),
                             Code = "CorreoEnvioAdjuntoRadicarSatelitalANE",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com,ruben.zuleta@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3899BX7EEVNRH5R4",
+                            Id = new Guid("d859d6bb-f955-481b-9f2c-d0148024d219"),
                             Code = "CorreoEnvioANE-Mintic",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT99T651MZKVXTR97N",
+                            Id = new Guid("756cbcb4-7ece-49d3-b1a6-56fcd04e4c1d"),
                             Code = "CorreoEnvioANE-MinticNOPSO",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT74CZP6EGXQDBS5P7",
+                            Id = new Guid("1512caaa-8174-4151-b87e-75796e4e7677"),
                             Code = "CorreoEnvioRadicarSatelitalANE-Mintic",
+                            IsDeleted = false,
                             Text = "solicitudessatelital@g.com,Paola@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1450WRT5XA39V8BB",
+                            Id = new Guid("d82289a9-0773-4534-90ff-c98e224078d6"),
                             Code = "CorreoInformeEvaluacion",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTFJFAR3T3QCKP8NS2",
+                            Id = new Guid("28a60301-2440-45d6-97da-9eb2021a7e2e"),
                             Code = "CorreoMinticSoporte",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTR2XYVM8NV8GB8QZS",
+                            Id = new Guid("3b966935-fb9f-4836-b1a1-76bc4aaab426"),
                             Code = "CorreoRadicadoANEPSO",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZSCJVYP79TR4FQ81",
+                            Id = new Guid("712299cb-6765-40ad-8cdb-5bff4f8465b3"),
                             Code = "CorreoRechazoANE-MINTIC_Satelital",
+                            IsDeleted = false,
                             Text = "solicitudessatelital@g.com,Paola@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTVDRHBNJCWM6R1B3B",
+                            Id = new Guid("44533aa7-c9d8-4795-8b08-aa5a9ca23f7e"),
                             Code = "CorreoRechazoMINTIC_ANE_Satelital",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTFD7G48MY5TTPQE34",
+                            Id = new Guid("4970c67e-c3cb-46bf-97f4-bf73b16d512b"),
                             Code = "CorreoRechazoMintic-Mintic",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJFJCA2RTXT3KYMKG",
+                            Id = new Guid("7ec5f396-df82-4f44-83e9-adb5f03cf430"),
                             Code = "CorreoRemitente",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTP5KAW47BKQPZQE79",
+                            Id = new Guid("ee7c856f-bb7b-44aa-975c-b7ecb5f4aec1"),
                             Code = "CorreoResumenTecnico",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1NVBAHQ5QS3JJHET",
+                            Id = new Guid("d5d4f5f8-eb0b-4d5a-8ca2-f94762eb3e40"),
                             Code = "CorreosAlertaCancelaciones",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7CZPNFFQVVXY42XE",
+                            Id = new Guid("e67380da-1e55-43b6-9673-8d793d13811c"),
                             Code = "CorreosAlertaCesionExpediente",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXTE1QCFWEKNM083W",
+                            Id = new Guid("08f213a7-e825-4dfb-8302-7a0071b6ed9a"),
                             Code = "CorreosAlertaCesionRedes",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTGNQ16SYFZZ90C5VQ",
+                            Id = new Guid("757f395f-1f81-48aa-a6ba-07fb120f6c7f"),
                             Code = "CorreosAletaBloqueoGarantias",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co,garantias@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTWK8BBVJ3S24H9F49",
+                            Id = new Guid("e6aea4d0-9674-4809-bc1a-845423f0fa58"),
                             Code = "CorreosAletaBloqueoRUTIC",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co,rutic@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTDXQ47RJ8NAZ8A54S",
+                            Id = new Guid("555980ff-c8f1-483e-a6d1-161e4ce935c1"),
                             Code = "CorreosAletaBloqueos",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co,bloqueos@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4BFRA1GKB4S43YDW",
+                            Id = new Guid("021a6d0d-2a8e-4c7f-b4bc-e0994a893ea3"),
                             Code = "CorreosCargaCT",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4W6AHR3FXNDYSBEW",
+                            Id = new Guid("e5c70239-99f5-4f07-99b9-4a9f970ac394"),
                             Code = "CorreosCopiaOcultaRechazoSolicitud",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTEBXX7SC5T3Q7WAM5",
+                            Id = new Guid("17a7f07e-e659-4fe6-bcc7-96b4a62ea501"),
                             Code = "CorreosCreacionPSO",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTMVVQKT2VDNWS4RY",
+                            Id = new Guid("14fceb76-4e65-4280-a380-3f20e3a492ab"),
                             Code = "CorreosDesmarcacionLocalidad",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTP809XN824VCW20ZR",
+                            Id = new Guid("105af734-ba2f-4686-b9be-c325b88a7fac"),
                             Code = "CorreosDocumentosRequeridosCoordinador",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJEQ60CBKY528MTHP",
+                            Id = new Guid("61ee4dd9-4882-4b28-b21e-99deaf489be6"),
                             Code = "CorreosDocumentosRequeridosCoordinadorANE",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTM3T74FNDT0KD6YWM",
+                            Id = new Guid("278478c9-3db3-4a36-aaf5-5275bc716108"),
                             Code = "CorreosMarcacionLocalidad",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTE4FE5PFJ0RGQZ9TA",
+                            Id = new Guid("f376f41c-4eb8-451e-b3e1-c4e32423c78b"),
                             Code = "CorreosRadicacionSolicitudesPSO",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYVKZGD9DFZ31PV4K",
+                            Id = new Guid("a71bb091-1b39-4f04-a985-6f9f3b6112ab"),
                             Code = "CorreosRechazoSolicitudANE",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3G914YAGADN236CW",
+                            Id = new Guid("cdf69568-315f-4c04-a67e-a06083923690"),
                             Code = "CorreosRechazoSolicitudMINTIC",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTD9356TKVM2781PF0",
+                            Id = new Guid("961e130d-f15d-48d2-91ef-9a9c9fdc85ee"),
                             Code = "CorreosRequerimientoTotalBB",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYAJ9SD6BY2Q8HTX3",
+                            Id = new Guid("0c113782-3d17-49fa-a025-ec283f46bfaf"),
                             Code = "CorreosSubasanacionANE",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTC5SC1CYB23PE8JJM",
+                            Id = new Guid("437d5f80-2010-41ee-8ddd-512ccb8e8644"),
                             Code = "CorreosSubsanacionOperador",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTX7DBW30CGJ1DPZZH",
+                            Id = new Guid("19c3a369-2206-4092-8443-5b2eb3187435"),
                             Code = "CorreosSubsanacionOperadorCopiaOculta",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJXB1KVC3B5KBP5GM",
+                            Id = new Guid("5bf4b37c-907a-4509-bce7-7bf643588fc4"),
                             Code = "CorreoTesamerica",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT55DWW1C4D6TW6K5X",
+                            Id = new Guid("de8b1d3f-ddf2-48ae-af12-714460759a3d"),
                             Code = "Cronograma",
+                            IsDeleted = false,
                             Text = "2"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQWGW17W21TYFM8MB",
+                            Id = new Guid("117675d4-bf57-49d6-86f9-a5a1e803c710"),
                             Code = "CuadroNacionalAtribucionesFrecuenciaLink",
+                            IsDeleted = false,
                             Text = "http://www.mintic.gov.co/images/documentos/espectro_radioelectrico/cuadro_nacional/cuadro_nacional_atribucion_bandas_de_frecuencias_2010.pdf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTFYCYSD9NTXZV83HK",
+                            Id = new Guid("864f90f4-131e-4d8e-88e3-8f5b618ce946"),
                             Code = "CustomerFrontContactInfo",
+                            IsDeleted = false,
                             Text = "Para dudas o inquietudes respecto a la funcionalidad de esta aplicación"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9PT086S2X8VEC1XK",
+                            Id = new Guid("6d2a1fba-af62-4868-9c5a-4b9ca99f24f1"),
                             Code = "CustomerFrontLegalInfo",
+                            IsDeleted = false,
                             Text = "Es interés del Ministerio de Tecnologías de la Información y las Comunicaciones (TIC) la salvaguardia de la privacidad de la información personal del usuario obtenida a través del sitio web"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTS077V06CZCE4X326",
+                            Id = new Guid("dfb99c7b-fc55-42dc-b09b-d0fd5d667136"),
                             Code = "CustomerFrontProcessInfo",
+                            IsDeleted = false,
                             Text = "El Sistema para la Gestión del Espectro Radioeléctrico “SGE”"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTM9WBCDQ80YPPA2TN",
+                            Id = new Guid("d2ff473b-7280-4395-89aa-9a6ccaa8ac25"),
                             Code = "DependenciaAlfa",
+                            IsDeleted = false,
                             Text = "sage001"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT02A4MX2G0D7GEYNR",
+                            Id = new Guid("5f4d9725-7888-421b-8478-c1b4da87fe58"),
                             Code = "DestinatariosBCCDesestimientoTacitoSatelital",
+                            IsDeleted = false,
                             Text = "soporte.sge@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCBJ8GCX4DZRMKE8R",
+                            Id = new Guid("f006e370-d426-422e-a0c9-1b0c378e4186"),
                             Code = "DestinatariosCCDesestimientoTacitoSatelital",
+                            IsDeleted = false,
                             Text = ""
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTECMKPAY04YMR1KAV",
+                            Id = new Guid("73d3ed9f-f6e9-484b-bcec-99e02a3796eb"),
                             Code = "DestinatariosDesestimientoTacitoSatelital",
+                            IsDeleted = false,
                             Text = "hernan.palta@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTC1E5D82RVYG4FW0M",
+                            Id = new Guid("d682af83-1699-405f-81c3-d024719ec709"),
                             Code = "DestinatariosDesestimientoTacitoSatelitalpreliminarAne",
+                            IsDeleted = false,
                             Text = "hernan.palta@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2C7X17AGXCRF258Y",
+                            Id = new Guid("20959190-b047-4450-966b-f62d027138ce"),
                             Code = "DiasRevisionRadicadosAlfa",
+                            IsDeleted = false,
                             Text = "30"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXBXAVBPXQSS56PV7",
+                            Id = new Guid("f6af38ca-8294-486a-8ea3-a5517db78366"),
                             Code = "DireccionAne",
+                            IsDeleted = false,
                             Text = "Calle 93B # 16-47"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA7YZQ6T758J907M1",
+                            Id = new Guid("d9f21d94-659f-4aa6-b3c8-c0fe5adfb990"),
                             Code = "DireccionMensajeFormato",
+                            IsDeleted = false,
                             Text = "El formato para ingresar la dirección de la estación en el anexo es: Identificación de la vía (calle"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT92HWPA0M5BR575H6",
+                            Id = new Guid("f8ffdf5d-b0ad-4982-ab7d-7d78c4bdccb6"),
                             Code = "DireccionMensajeMaximoCaracteres",
+                            IsDeleted = false,
                             Text = "En el anexo solo se pueden ingresar máximo 49 caracteres en la dirección de la estación."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTDN6S183VPVQZASX9",
+                            Id = new Guid("a0ee64e9-973c-4423-a749-80afef87c169"),
                             Code = "DireccionMintic",
+                            IsDeleted = false,
                             Text = "Edificio Murillo Toro Cra. 8a entre calles 12 y 13"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCGYJ7XT3B1V4V7TJ",
+                            Id = new Guid("0a54ff7e-5375-493c-b3f2-f655e3ce9c1f"),
                             Code = "EmailAnalisisAdministrativo",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJ2X6K7JJ2CB7QGC6",
+                            Id = new Guid("6493d80a-f3ce-4b23-80b8-794b0f1344f4"),
                             Code = "EmailAnalisisTecnico",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7JJ62WSRHF1GK671",
+                            Id = new Guid("8fd664ad-763c-4c64-98ac-e5961b63d645"),
                             Code = "EmailAne1",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT011Y2NH3NQVN7VF8",
+                            Id = new Guid("17c01700-47f1-4035-8754-fda78a3fdfb1"),
                             Code = "EmailAne2",
+                            IsDeleted = false,
                             Text = "No disponible"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTE9HDZJ5MATXNF0WV",
+                            Id = new Guid("68ade7e6-3254-4e13-880c-0bd00c1d1d1c"),
                             Code = "EmailCierre",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1K7TH4860J6X3SJR",
+                            Id = new Guid("8a1665ae-2918-4348-8fcc-dc5bef5ca2f9"),
                             Code = "EmailFinalizada",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHBHDKEAFRJPYP076",
+                            Id = new Guid("9acffc23-1020-461c-aba4-202f7b9be7d8"),
                             Code = "EmailMintic1",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYEE02WWPSJ26TXZ5",
+                            Id = new Guid("cbac277f-ca1e-4128-9435-108cb0e0b092"),
                             Code = "EmailMintic2",
+                            IsDeleted = false,
                             Text = "No disponible"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTF0J78SZYRWJ93799",
+                            Id = new Guid("c5f96629-1901-42aa-bce7-8b1e5560daa8"),
                             Code = "EmailsNotificacionSubsanarDocumentos",
+                            IsDeleted = false,
                             Text = "soporte.tesamerica@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTKAXT3C0NETQ76J3M",
+                            Id = new Guid("81936e9a-1c62-42c0-9909-75e2490f2e66"),
                             Code = "EntornoPruebas",
+                            IsDeleted = false,
                             Text = "1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTT632CDNQW41Z9ABW",
+                            Id = new Guid("e82fdef8-0453-42c9-80a7-b27249888a63"),
                             Code = "EsPrueba",
+                            IsDeleted = false,
                             Text = "true"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6GSP0F95DW20SB0B",
+                            Id = new Guid("958b40ad-f710-45a7-899d-95651b81ce7e"),
                             Code = "EspTemp_AZDigital_Dependencia",
+                            IsDeleted = false,
                             Text = "Pru"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTMS82EXCECQK9BDHZ",
+                            Id = new Guid("4fd1423b-11b7-4554-8d36-9c6c261fd4a4"),
                             Code = "EspTemp_AZDigital_IdDirectorio",
+                            IsDeleted = false,
                             Text = "6369"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTJY3ZJZ67CVANMX3",
+                            Id = new Guid("9573f54c-809b-40f7-9f99-4248bf06fcae"),
                             Code = "EspTemp_AZDigital_Sitio",
+                            IsDeleted = false,
                             Text = "Prue"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2MANNT8T02C7DNTV",
+                            Id = new Guid("f000f5ff-ff3f-4b7a-9db8-499cbf3e5a1c"),
                             Code = "EspTemp_AZDigital_TramiteRadicado",
+                            IsDeleted = false,
                             Text = "PQRSD"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTF3SXZHZBWW15ESXA",
+                            Id = new Guid("4419ffbc-78e2-4323-b859-3747512cb0a3"),
                             Code = "EspTemp_AZDigital_TramiteRegistro",
+                            IsDeleted = false,
                             Text = "rs"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9CP4Y0N2XM8Z3D2S",
+                            Id = new Guid("38ed2e64-19f0-460b-94a9-e5b35f31795e"),
                             Code = "EspTemp_ClaseExpediente",
+                            IsDeleted = false,
                             Text = "90"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTBNT716DF9W2X6R25",
+                            Id = new Guid("ff52c068-059e-4492-a669-87567767f38e"),
                             Code = "EspTemp_CorreoAprobacionANE_MINTIC",
+                            IsDeleted = false,
                             Text = "solicitudesane@g.com,ruben.zuleta@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTW0850CY8S631SFTC",
+                            Id = new Guid("5a08b3cc-2f68-4c12-b3b5-02fb11b0460e"),
                             Code = "EspTemp_CorreoAprobacionMINTIC-ANE",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com,ruben.zuleta@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTKNSM60N1DR9WR74F",
+                            Id = new Guid("3f81192b-0293-40ad-ab5b-c5a541c81ef4"),
                             Code = "EspTemp_CorreoAprobacionResolucion",
+                            IsDeleted = false,
                             Text = "solicitudesane@g.com,kballen@g.com,crojas@g.com,ligomez@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTT8SVY2EZ5EYKG65W",
+                            Id = new Guid("1299eebd-5742-4261-80fc-7ab514303155"),
                             Code = "EspTemp_CorreoCopiaANE-MINTIC",
+                            IsDeleted = false,
                             Text = "solicitudesane@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTKXXRWS26Q3NW8CY",
+                            Id = new Guid("76edb7bd-62e7-4b56-8947-9f30e0d66bc4"),
                             Code = "EspTemp_CorreoCopiaMINTIC-ANE",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2A8DX69PHQNP20FA",
+                            Id = new Guid("603c3c6e-03fb-4f76-8704-c6e4cd25dddb"),
                             Code = "EspTemp_CorreoRadicarANE",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTWN5KK4Z8SCWEXSM8",
+                            Id = new Guid("042d604a-9acc-4eed-aee7-56a122610d88"),
                             Code = "EspTemp_CorreoRadicarMintic",
+                            IsDeleted = false,
                             Text = "solicitudesane@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7VFSWT0PV0C91XRD",
+                            Id = new Guid("588d5b3f-921b-4e92-8970-12bd927a6719"),
                             Code = "EspTemp_CorreoRechazoANE-MINTIC",
+                            IsDeleted = false,
                             Text = "solicitudesane@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHPV7BE5P5DGNRVYM",
+                            Id = new Guid("a4b3d69b-33a4-426e-b010-40ec6e5839a3"),
                             Code = "EspTemp_CorreoRechazoMINTIC_ANE",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTPKVJ5P88818NDTSV",
+                            Id = new Guid("d88ea36b-6ffd-4224-a44f-b77803a80b03"),
                             Code = "EspTemp_ExtensionArchivoPatronRadiacion",
+                            IsDeleted = false,
                             Text = ".bmp,.gif,.heif,.heic,.jpg,.jpeg,.png,.psd,.svg,.tif,.tiff,.doc,.docx,.md,.odt,.pdf,.ppt,.pptx,.rtf,.txt,.xls,.xlsx,.7z,.rar,.zip"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT0SXBN16MPZ6FVSPX",
+                            Id = new Guid("d2363926-21b8-4957-a857-91a9b6490602"),
                             Code = "EspTemp_Fecha_Subsanacion_Admin",
+                            IsDeleted = false,
                             Text = "1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTR96MRFMWAE0G439",
+                            Id = new Guid("6be1b52f-8480-4b4e-b877-55dc24c0e712"),
                             Code = "EspTemp_Fecha_Subsanacion_Tec",
+                            IsDeleted = false,
                             Text = "1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT02VDQ7X66VP2MATK",
+                            Id = new Guid("3513a42f-2d23-4436-ac81-d6b1899beaa3"),
                             Code = "EspTemp_Hojas_Archivo_Tecnico",
+                            IsDeleted = false,
                             Text = "1. Admin,2. Info General,3. IMT o PMP,4. Punto a Punto,5. Control de Cambios,Menu"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTWA39JEW1K0GW2258",
+                            Id = new Guid("d5ccd5d4-b456-4b25-a112-a2a489b48ff1"),
                             Code = "EspTemp_PortadaANE",
+                            IsDeleted = false,
                             Text = "Agencia Nacional del Espectro;Solicitudesdeespectro@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCBWMC3N7ZW8G2NDK",
+                            Id = new Guid("8eb1017b-3492-419a-97c0-986bc33abda8"),
                             Code = "EspTemp_PortadaMINTIC",
+                            IsDeleted = false,
                             Text = "Ministerio de Tecnologías de la Información y las Comunicaciones; solicitudesane@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA0YHN0C8CCY444QN",
+                            Id = new Guid("0d50fd1a-c647-4a5d-aec3-642020639e66"),
                             Code = "EspTemp_PuntajeTramite",
+                            IsDeleted = false,
                             Text = "50"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3KMEZ4BS2PWW74KT",
+                            Id = new Guid("b3b1bae7-8251-44a0-80c2-a155f47442ee"),
                             Code = "EspTemp_TextoReqPorAnexoTec",
+                            IsDeleted = false,
                             Text = "Anexo Técnico para permisos temporales: Para agilizar la evaluación técnica de la solicitud en curso"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTVJZB93DVA1WF9YP6",
+                            Id = new Guid("f2e4be40-51f3-4d44-be4a-ca9159427d27"),
                             Code = "EspTemp_VersionFormatoAnexo",
+                            IsDeleted = false,
                             Text = "1,1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3ZMJR8E3HEQVWWTN",
+                            Id = new Guid("f2696378-304b-4aa2-bfdc-e62b4d3d7438"),
                             Code = "EstadosExpedienteActivo",
+                            IsDeleted = false,
                             Text = "eAUT"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYYF8BWCZAKMZ5HC1",
+                            Id = new Guid("f1f246eb-d0e7-4510-86b4-557e90bd0683"),
                             Code = "EstadosExpedienteDatosContacto",
+                            IsDeleted = false,
                             Text = "eREG"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTKJ0FP6RD868XHWZ5",
+                            Id = new Guid("3bdf7dad-2e76-4691-a071-1cb2bd6be22e"),
                             Code = "EstadosExpedienteMuerto",
+                            IsDeleted = false,
                             Text = "eX0,eX1,eX1B,eX2B,eX3,eX4,eX4B"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT10K1JPP7WMKGSN0M",
+                            Id = new Guid("51715021-1406-4491-8735-34dfee01565d"),
                             Code = "EstadosExpedienteNoUsadosCesion",
+                            IsDeleted = false,
                             Text = "eRES,eCT,eBDU,eDEP,eIN,eREG,eVEN,eTER,eX0,eX1,eX1B,eX2B,eX3,eX4,eX4B"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTP9HYZ5GM9TGK0MG8",
+                            Id = new Guid("a56bee44-0f16-449f-a40a-9f8c4b11a1d9"),
                             Code = "EstadosExpedienteNoUsadosFueraPSO",
+                            IsDeleted = false,
                             Text = "eVEN,eX0,eX1,eX1B,eX2B,eX3,eX4,eX4B"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTKZ75YK36YCX44ZMC",
+                            Id = new Guid("ea93b779-caee-4a6f-bb04-8aefb63b0cd4"),
                             Code = "EstadosExpedienteNoUsadosPSO",
+                            IsDeleted = false,
                             Text = "eCT,eRES,eVEN,eX0,eX1,eX1B,eX2B,eX3,eX4,eX4B"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXS1K8N69BZFVJSHG",
+                            Id = new Guid("a6addc7a-39bf-4008-9172-97f6f5846181"),
                             Code = "EstadosExpedienteRadicacionParalelo",
+                            IsDeleted = false,
                             Text = "eAUT,eSOL"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJFZRG5JFA6MGK4CY",
+                            Id = new Guid("d6011df7-859d-4573-8b18-f5aafd1e94a7"),
                             Code = "EstadosExpedienteRadicacionSerie",
+                            IsDeleted = false,
                             Text = "eRES,eCT"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTM4R93CWK8F2AMRF9",
+                            Id = new Guid("2d878c8d-2ced-4c54-8e0e-c325fb7a666d"),
                             Code = "EstadosExpedienteSincronizacion",
+                            IsDeleted = false,
                             Text = "eAUT"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT5HF0HP7ZG7A9NPWN",
+                            Id = new Guid("5ea0cc51-6b3c-4d9b-b4b3-2e6d726e74d7"),
                             Code = "EstadosRedesSolicitudCanFrecBB",
+                            IsDeleted = false,
                             Text = "rAUT"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTWVAZA1AQV5RACRBD",
+                            Id = new Guid("c446a74b-c804-4cbd-b7e5-130ff28c5c37"),
                             Code = "EstadosRedesVAC",
+                            IsDeleted = false,
                             Text = "rAUT,rRES,rPRN,rPRE,rTT"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHAAT40S3FGD13SHK",
+                            Id = new Guid("d1827d20-052f-4989-b887-a99015cdba1a"),
                             Code = "ExcelAutoliquidador",
+                            IsDeleted = false,
                             Text = "Use el botón 'Cargar formato excel' si desea liquidar múltiples redes mediante un archivo .xls previamente diligenciado. El formato puede obtenerse haciendo clic en el botón 'Plantilla formato excel'"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSC1VGB2FKZXA7E47",
+                            Id = new Guid("0464f916-a5db-4f8f-a27e-e8fc0186426d"),
                             Code = "ExplanationAdicionarObservacion",
+                            IsDeleted = false,
                             Text = "Por favor ingrese la razón por la cual realizó este cambio"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT00E8WYBBTQW6ZKDS",
+                            Id = new Guid("83d1d38d-8784-4b70-9408-a0b8fad7097b"),
                             Code = "ExplanationAdministrationGrid",
+                            IsDeleted = false,
                             Text = "En esta sección podrá consultar o crear antenas y equipos y consultar reportes sobre información técnica y administrativa"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA7APYYX0VMQA5E7N",
+                            Id = new Guid("a9c2f519-36c5-4a97-b02d-ded5eb6ef2ae"),
                             Code = "ExplanationAntennaCreation",
+                            IsDeleted = false,
                             Text = "Formulario de creación de antena"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1418M2SA0R524DPQ",
+                            Id = new Guid("bea6bacb-398a-4d90-bfad-12dc75ed1bc6"),
                             Code = "ExplanationAntennaList",
+                            IsDeleted = false,
                             Text = "Seleccione la antena desde la lista de selección para ver los detalles. Si la antena no se encuentra puede crearla haciendo clic en el botón 'Nueva antena'"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTDNCSNAH8NHPK9FAC",
+                            Id = new Guid("e185e001-6650-41d5-a2fe-a6551be9d3bf"),
                             Code = "ExplanationApplicationAdministrativeAnalysis",
+                            IsDeleted = false,
                             Text = "El análisis administrativo de una solicitud es el primer proceso luego de su radicación."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTD7CNZJTQ2471Y905",
+                            Id = new Guid("a8ba8c49-20a8-4afb-b63b-f92aa123f254"),
                             Code = "ExplanationApplicationCertificados",
+                            IsDeleted = false,
                             Text = "Por favor seleccione el tipo de certificado"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXMYRHWTP0QH5PX97",
+                            Id = new Guid("64771fb6-7241-402f-9cfd-8644355d251d"),
                             Code = "ExplanationApplicationClosing",
+                            IsDeleted = false,
                             Text = "Las solicitudes en cierre se encuentran en proceso de generación de la resolución"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2CG8E78SSZA4D7JP",
+                            Id = new Guid("8e5c8b3d-6ce2-4083-b824-19a28e421061"),
                             Code = "ExplanationApplicationCreation",
+                            IsDeleted = false,
                             Text = "Por favor ingrese la información requerida para crear una nueva solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTX0ASGZSWAQC48A61",
+                            Id = new Guid("4f7b3317-bd01-4ebd-b410-e84ab28c2023"),
                             Code = "ExplanationApplicationCreationPortfolio",
+                            IsDeleted = false,
                             Text = "Debe hacer una solicitud por expediente y la documentación debe corresponder al expediente que está tramitando."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT84S4HBDZVT8EA565",
+                            Id = new Guid("15631457-5e18-4b21-b05d-d3d08db5c9c3"),
                             Code = "ExplanationApplicationDetails",
+                            IsDeleted = false,
                             Text = "Información básica de la solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSJYP2R3204HJVYFF",
+                            Id = new Guid("7497a5ff-55c5-417c-a9e4-09f039101df4"),
                             Code = "ExplanationApplicationDetailsAnexarArchivos",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTS5WGFHH4W9BR8CX0",
+                            Id = new Guid("0526278c-ea76-44cf-bb4a-140318c922b2"),
                             Code = "ExplanationApplicationDetailsAnexarArchivosFuncionario",
+                            IsDeleted = false,
                             Text = "Señor funcionario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCQK8ZCMJ9JBPRCBF",
+                            Id = new Guid("e47f1ff5-d22e-4c00-b5a8-007ce483dc50"),
                             Code = "ExplanationApplicationDetailsArchivosSolDirectas",
+                            IsDeleted = false,
                             Text = "Archivos necesarios: Cédula de ciudadanía"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYM8C12PXSYV752G9",
+                            Id = new Guid("c9f0485c-6f43-49bd-a876-d49f185869bf"),
                             Code = "ExplanationApplicationDetailsEditarInfoTecnica",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTPNKAQR9XBM468FN6",
+                            Id = new Guid("db8fc0d3-52d3-4010-af0f-354109dffdd3"),
                             Code = "ExplanationApplicationDetailsEditarInfoTecnicaFuncionario",
+                            IsDeleted = false,
                             Text = "Señor funcionario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTP79F9T467647RARH",
+                            Id = new Guid("a60e54c2-f2a5-4828-b76d-6614244b296e"),
                             Code = "ExplanationApplicationDetailsRadicar",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQQNJF201VXNW26FF",
+                            Id = new Guid("b88c8977-eab5-4bd5-9e3e-23af1882b87c"),
                             Code = "ExplanationApplicationDetailsRadicarFuncionario",
+                            IsDeleted = false,
                             Text = "Señor funcionario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTD9WGS9X2E1XN3KW7",
+                            Id = new Guid("26d19393-800c-4f00-82e6-6646e92a47c8"),
                             Code = "ExplanationApplicationEdit",
+                            IsDeleted = false,
                             Text = "Puede asignar un nombre personalizado a esta solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTKKCHEM9NQAVSK7AB",
+                            Id = new Guid("3623b308-9b76-4e9d-ad01-ef4795e6625d"),
                             Code = "ExplanationApplicationFileList",
+                            IsDeleted = false,
                             Text = "A continuación se listan los archivos adjuntos a la solicitud seleccionada."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTFAAAWANYYD3FSR0C",
+                            Id = new Guid("3571cfbb-3a6b-4d76-96ba-206e9afd161a"),
                             Code = "ExplanationApplicationFileUpload",
+                            IsDeleted = false,
                             Text = "Aliste los siguientes documentos: Formato básico de solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT20M81X1Z55AWSZHC",
+                            Id = new Guid("0a6b4011-6db8-4e3b-8f7e-1b30cb2b68e9"),
                             Code = "ExplanationApplicationInProccess",
+                            IsDeleted = false,
                             Text = "Se listan las solicitudes que aún no han sido radicadas oficialmente en el sistema."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTBBBAEGCS6QGE2RCB",
+                            Id = new Guid("2cb54c9c-9df6-4493-a6da-9e8ca72f111b"),
                             Code = "ExplanationApplicationInProccessFront",
+                            IsDeleted = false,
                             Text = "Se listan las solicitudes que aún no han sido radicadas oficialmente en el sistema."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXR7D466H3S0917QX",
+                            Id = new Guid("522ac20b-b053-4a59-9b7a-734d49014e48"),
                             Code = "ExplanationApplicationMessageListSummaryNoNotes",
+                            IsDeleted = false,
                             Text = "No se encontraron anotaciones."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTD9FSZ3GRZPBW222N",
+                            Id = new Guid("a09f10d0-bfbf-4463-be42-18f396b61930"),
                             Code = "ExplanationApplicationRedes",
+                            IsDeleted = false,
                             Text = "Por favor seleccione las redes del expediente seleccionado que desea incluir en el certificado."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZXQ7EE8BJ652EXTH",
+                            Id = new Guid("c26a59dd-b8d8-428d-a6e3-b11238082d9a"),
                             Code = "ExplanationApplicationSolve",
+                            IsDeleted = false,
                             Text = "Consulte el histórico de las solicitudes finalizadas"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6V4SZVN47ZPYA252",
+                            Id = new Guid("ee5f9c04-56bb-4147-921d-5545173ec8e2"),
                             Code = "ExplanationApplicationTechnicalAnalysis",
+                            IsDeleted = false,
                             Text = "En el análisis técnico se efectuará un estudio detallado de la información técnica registrada para cada solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSX4DGBW2XVC4SSXJ",
+                            Id = new Guid("dbe89446-b76a-4229-afbf-c85cd1eaf059"),
                             Code = "ExplanationDuplexerCreation",
+                            IsDeleted = false,
                             Text = "Formulario de creación de duplexor"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT744Z6DNA7066ZJAH",
+                            Id = new Guid("fd6d239c-729c-4832-a475-d6f0ce142327"),
                             Code = "ExplanationDuplexerList",
+                            IsDeleted = false,
                             Text = "Seleccione el duplexor desde la lista de selección para ver los detalles. Si el duplexor no se encuentra puede crearlo haciendo clic en el botón 'Nuevo duplexor'"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTJBYMPTZ5PJE6717",
+                            Id = new Guid("8e1679dd-7a5c-4a13-8014-3ceec1f92033"),
                             Code = "ExplanationEquipmentCreation",
+                            IsDeleted = false,
                             Text = "Formulario de creación de equipo"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQQBKJ9CSG47EZR1N",
+                            Id = new Guid("29b0312e-377e-4865-ba03-9bd739d1d9dd"),
                             Code = "ExplanationEquipmentList",
+                            IsDeleted = false,
                             Text = "Para el caso de monitores de modulación y monitor de frecuencia y la línea de transmisión en las redes de radiodifusión sonora (AM"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCMY64NRD3FGCRESZ",
+                            Id = new Guid("d168f962-f4ec-4c67-a6d8-db1b071430d7"),
                             Code = "ExplanationFilesSummaryNoFiles",
+                            IsDeleted = false,
                             Text = "No se han adjuntado archivos a la solicitud."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT24TWY12XQGHVK5Z4",
+                            Id = new Guid("2c0e98cf-0e3a-4b0c-a228-e448354cf68c"),
                             Code = "ExplanationPortfolioEdit",
+                            IsDeleted = false,
                             Text = "Desde este formulario es posible modificar el nombre del expediente correspondiente al expediente seleccionado"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZR6CFYZ3521S8JH1",
+                            Id = new Guid("f68a0382-c2ff-4c95-93a8-1a9eb8f58219"),
                             Code = "ExplanationPortfolioGrid",
+                            IsDeleted = false,
                             Text = "Listado de expedientes. Utilice los íconos frente a cada expediente para observar los detalles o editar. Si no encuentra el número de expediente deseado"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9EBN5KNW86GZYYN5",
+                            Id = new Guid("c2b6e405-f1d8-452d-b0b6-6f9cce055a72"),
                             Code = "ExplanationRejectApplication",
+                            IsDeleted = false,
                             Text = "Por favor ingrese la información requerida para rechazar la solitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTM458SMPVV5NAK48W",
+                            Id = new Guid("2c3186e3-937f-4ee7-8bea-f9a6873d350e"),
                             Code = "ExplanationSimulacionSpectrumE",
+                            IsDeleted = false,
                             Text = "Ingrese a esta opción si desea simular algún enlace usando el Sistema de Simulación en Línea."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTRT6Z3PDZXAQ85GB3",
+                            Id = new Guid("fb12e130-e0d2-4ae4-86d1-5f37bdd6989c"),
                             Code = "ExplanationTechnicalInformationEdit",
+                            IsDeleted = false,
                             Text = "Información general y creación de antenas"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTW649VQP3JBDQHYH3",
+                            Id = new Guid("1bcb7dfb-750e-4282-9a9f-65f50411133d"),
                             Code = "ExplanationTechnicalInformationIndex",
+                            IsDeleted = false,
                             Text = "Visualización de la información técnica de la solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTAM3C6HVY88C76NWA",
+                            Id = new Guid("9815f79c-783b-41cb-a439-824765e738ae"),
                             Code = "ExplanationTechnicalInformationSummaryNoInfo",
+                            IsDeleted = false,
                             Text = "No se ha ingresado información técnica a la solicitud."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJ0430WVFHCHQD1BY",
+                            Id = new Guid("90b67539-2a15-4001-8398-9fe297553c58"),
                             Code = "FaxAne",
+                            IsDeleted = false,
                             Text = "2436212"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT8P098SMX68XHR2HC",
+                            Id = new Guid("8e571069-ae98-4483-8c8f-7ddd1f0e942e"),
                             Code = "FaxMintic",
+                            IsDeleted = false,
                             Text = "No disponible"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTG8XQYZ0ZBXEZM0D1",
+                            Id = new Guid("36ec2add-831a-41d0-81d3-c1116a636de2"),
                             Code = "Fecha_Subsanacion_Coordinador_Satelital_Administrativo",
+                            IsDeleted = false,
                             Text = "1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTBR9G07365DZSN4PQ",
+                            Id = new Guid("2199dd78-b40a-42f3-81bb-724b778c4816"),
                             Code = "Fecha_Subsanacion_Coordinador_Satelital_Tecnico",
+                            IsDeleted = false,
                             Text = "5"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1RM1KDTFZ3JRS3KP",
+                            Id = new Guid("6650765c-3fd4-41a9-acd0-264ab3749c96"),
                             Code = "Fecha_Subsanacion_Revisor_Satelital_Administrativo",
+                            IsDeleted = false,
                             Text = "1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTGKRHTWHMX6DWFCES",
+                            Id = new Guid("2ce3217d-8064-4fc5-9c20-12b983c0512c"),
                             Code = "Fecha_Subsanacion_Revisor_Satelital_Tecnico",
+                            IsDeleted = false,
                             Text = "10"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4FX5D3Y67B1HENX8",
+                            Id = new Guid("a0ddf6be-2231-4403-943b-f9b2100a0d25"),
                             Code = "FechaFinMantenimiento",
+                            IsDeleted = false,
                             Text = "11/10/2023 23:00:00.000"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTRKJ0FAAFDWDR4DTD",
+                            Id = new Guid("26088fa7-5aa2-49e9-9cfa-bb86936fa732"),
                             Code = "FechaInicioMantenimiento",
+                            IsDeleted = false,
                             Text = "11/10/2023 20:00:00.000"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT29KPAJ3WTEJB4AWR",
+                            Id = new Guid("d4b91763-5a4d-4287-b73a-14c65d18b719"),
                             Code = "FilesNeededToRadicate",
+                            IsDeleted = false,
                             Text = "los tipos de archivos obligatorios para radicar una solicitud en un proceso de selección objetiva son: Formato Básico de la Solicitud (firmado por el representante legal)"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTV3B0BY7VC1DHQ4TQ",
+                            Id = new Guid("ecccc3ee-2bf6-4cbb-b3f5-ac8e94cf488c"),
                             Code = "FilesSummaryFilesCount",
+                            IsDeleted = false,
                             Text = "Número de archivos adjuntos:"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTF1WSNQS3XRT2FNNP",
+                            Id = new Guid("e0fae68f-8f06-473a-8cf7-e8128c68b14d"),
                             Code = "FirmaElectronicaAction",
+                            IsDeleted = false,
                             Text = "urn:/#NewOperation"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJFTCTPFAVSX96008",
+                            Id = new Guid("f9362b3a-fad7-42fc-a6fc-7ad162d0820a"),
                             Code = "FirmaElectronicaAZAplicativo",
+                            IsDeleted = false,
                             Text = "20201209-092929-982602-00332255"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT29EBG2X9R7VJZQSE",
+                            Id = new Guid("9922b325-7514-4d0c-bbe2-552e37a19ce6"),
                             Code = "FirmaElectronicaAZCodificacion",
+                            IsDeleted = false,
                             Text = "Base64"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTD0GETX06KAYCAQN",
+                            Id = new Guid("c0938d2f-85c0-4f6a-a0b2-2d9d725fdd7d"),
                             Code = "FirmaElectronicaAZContraseña",
+                            IsDeleted = false,
                             Text = "b1a8262799b1746913b4476ab1b17238"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTEEHBXR4YRKDBH4TM",
+                            Id = new Guid("ec626cf6-8816-4075-85de-0518b98cffd2"),
                             Code = "FirmaElectronicaAZCuenta",
+                            IsDeleted = false,
                             Text = "20201120-151412-85f600-89728214"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTW54FTFYE7SAAF9NX",
+                            Id = new Guid("e817933a-d1ab-43cb-a5d4-767fbd6c72e5"),
                             Code = "FirmaElectronicaAZEstado",
+                            IsDeleted = false,
                             Text = "1-P"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTKMMYX4R8BFXPVZGF",
+                            Id = new Guid("0be3796a-6d2b-4c9c-9bd1-e6ac5751e111"),
                             Code = "FirmaElectronicaAZGrupo",
+                            IsDeleted = false,
                             Text = "20211007-161726-6bbb98-36629518"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTBK22JK1XA4CSX7N8",
+                            Id = new Guid("a18258e3-9f86-4f67-a0cf-f52dca228111"),
                             Code = "FirmaElectronicaAZOrden",
+                            IsDeleted = false,
                             Text = "0"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT0PARX3526280K11P",
+                            Id = new Guid("6e33e017-d01f-4296-9371-0530763df971"),
                             Code = "FirmaElectronicaAZRol",
+                            IsDeleted = false,
                             Text = "F"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXCWGTA7FJA08HVH9",
+                            Id = new Guid("a9b0afce-09a5-4c78-b162-3532ab3a04d1"),
                             Code = "FirmaElectronicaAZTipoFirma",
+                            IsDeleted = false,
                             Text = "E"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3A9HBFQ2YF44WNDW",
+                            Id = new Guid("057389a0-81ff-4c52-b7b4-83ffde24340a"),
                             Code = "FirmaElectronicaAZTipoMime",
+                            IsDeleted = false,
                             Text = "application/pdf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9ZN2KTFBG34RJXEA",
+                            Id = new Guid("85be221b-d50f-44dc-94b1-66451270eee6"),
                             Code = "FirmaElectronicaAZTipoPDF",
+                            IsDeleted = false,
                             Text = "PDF"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2ZSEPXYXG3SC66CM",
+                            Id = new Guid("4e645130-50c0-41f8-baab-506909678ef3"),
                             Code = "FirmaElectronicaAZUsuario",
+                            IsDeleted = false,
                             Text = "20201209-092929-982602-00332255"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT5ARVHG6PGQY5NXP2",
+                            Id = new Guid("e64b2a98-eacb-4ce7-993c-89dad0a6f471"),
                             Code = "FirmaElectronicaNombre",
+                            IsDeleted = false,
                             Text = "Prueba Documento AZSign PHP WS"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYV3YH38TDEDPWQKT",
+                            Id = new Guid("da382949-caf9-4776-8035-9e3384b52eb0"),
                             Code = "FirmaElectronicaRefWebHook",
+                            IsDeleted = false,
                             Text = "AZDigital: (5)"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTHBRNZVQWMHGSWQM",
+                            Id = new Guid("3ef619d0-e11e-4733-ac32-b0f920ca4ad0"),
                             Code = "FirmaElectronicaUrl",
+                            IsDeleted = false,
                             Text = "https://azsign.analitica.com.co/WebServices/SOAP/"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJXZ0VYEAMY06HTTM",
+                            Id = new Guid("f2a73b6e-dc7c-4a56-a1e8-3406c5cab099"),
                             Code = "Garantia_Coordinador",
+                            IsDeleted = false,
                             Text = "Coordinador del Grupo Interno de Trabajo Gestión de Garantías"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTP8J0RFYNS7065KW6",
+                            Id = new Guid("32544071-0f8f-4225-8063-05d738c2fc0b"),
                             Code = "Garantia_Director",
+                            IsDeleted = false,
                             Text = "Director de Industria de Comunicaciones"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA0ECMQHVA8N4ERV6",
+                            Id = new Guid("f5affe7f-9347-40be-a773-3f2bebb34a09"),
                             Code = "Garantia_Subdirector",
+                            IsDeleted = false,
                             Text = "Subdirector de Industria de Comunicaciones"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTZRXNZV0Y573W8X2",
+                            Id = new Guid("43aa253e-830d-493e-876b-a1a74ba27b1a"),
                             Code = "GraficaNacionalAtribucionesFrecuenciaLink",
+                            IsDeleted = false,
                             Text = "http://www.mintic.gov.co/images/documentos/espectro_radioelectrico/cuadro_nacional/grafico_cuadro_nacional.pdf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTAEEMKK0KXSXDJ9J1",
+                            Id = new Guid("68f35fc5-7cdb-46e3-bd4b-ebdc47c8666f"),
                             Code = "GrandTypeRUES",
+                            IsDeleted = false,
                             Text = "password"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7M93P2XY0MG1ZRP3",
+                            Id = new Guid("ab06db53-d71b-4ec6-a0b3-bfa8318016aa"),
                             Code = "HeaderRUES",
+                            IsDeleted = false,
                             Text = "CO-QA/GOB/MINTIC-0012/SISCD"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTE35WJAQ3012MZB28",
+                            Id = new Guid("79126f29-2237-4a31-b2dd-1df58a8d3194"),
                             Code = "http://www.mintic.gov.co/",
+                            IsDeleted = false,
                             Text = "http://www.mintic.gov.co/"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTDVTMY64EH6HDKZJW",
+                            Id = new Guid("5061664e-e2f0-4da8-99e2-a8383983d96f"),
                             Code = "IdExpedienteIMT",
+                            IsDeleted = false,
                             Text = "70974"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTT1ZDQ6VDJ5J024Q2",
+                            Id = new Guid("c92c33cf-9977-45ae-a45d-697f6ef42736"),
                             Code = "IMT_AZDigital_Dependencia",
+                            IsDeleted = false,
                             Text = "2.2"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTC2K2Q9PM7TPQVNJR",
+                            Id = new Guid("2f4da161-f16e-4b01-b65a-46a7c560fea8"),
                             Code = "IMT_AZDigital_IdDirectorio",
+                            IsDeleted = false,
                             Text = "132082"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTEBR9CRYRBFVM6EYB",
+                            Id = new Guid("613c011c-3a56-4162-9c2f-178c9519c786"),
                             Code = "IMT_AZDigital_Sitio",
+                            IsDeleted = false,
                             Text = "TL"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT89E7SCVXWVR56K0E",
+                            Id = new Guid("b5e15743-423e-4b60-a504-34716db3fc19"),
                             Code = "IMT_AZDigital_TramiteRadicado",
+                            IsDeleted = false,
                             Text = "PQRSD"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTF9FRPM9SJ31PSD8G",
+                            Id = new Guid("30173cf5-3c9b-4a8b-ad9f-55d74d616cdc"),
                             Code = "IMT_AZDigital_TramiteRegistro",
+                            IsDeleted = false,
                             Text = "RPTA_N"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTR7E9ZR38MRPDM32S",
+                            Id = new Guid("5ca3a7a8-81f8-4b27-9355-530ffc101964"),
                             Code = "IMT_CorreoRadicarMinticyANE",
+                            IsDeleted = false,
                             Text = "Solicitudesdeespectro@g.com,juan.benavides@tesamerica.com.co,dircom@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT92HMQ1X2C9BJG72R",
+                            Id = new Guid("10ae0701-7079-481c-a9f5-0a3a2521668d"),
                             Code = "IMT_IdAntenna",
+                            IsDeleted = false,
                             Text = "27374"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTBB9ABDTFQXYJ90T7",
+                            Id = new Guid("f8880208-46f0-4fbb-b415-c9205db8db8b"),
                             Code = "IMT_IdEquip",
+                            IsDeleted = false,
                             Text = "17363"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2WQMARTD804TG35F",
+                            Id = new Guid("2545bbaa-3516-42c4-9e1e-f20386b2a1c8"),
                             Code = "IMT_RadioBusquedaMetros",
+                            IsDeleted = false,
                             Text = "2600"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTMPZH79CTMSCXJ2WF",
+                            Id = new Guid("223ec92d-7d8b-4a12-909b-6becdc917212"),
                             Code = "IMT_Temp_File",
+                            IsDeleted = false,
                             Text = "C:\\SAGE\\CargueIMT\\IMT_Back\\tempdatafile"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTGQ4C19Q1CEMEXQ3V",
+                            Id = new Guid("8b5d2dcb-6f77-4866-a98b-758f2f46d0fb"),
                             Code = "LegendCantFilegApplicationDetails",
+                            IsDeleted = false,
                             Text = "Información faltante para radicar la solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTMDFP9965PX6PCS35",
+                            Id = new Guid("e2632e92-f774-460f-a7c8-4b38e6bf2a65"),
                             Code = "LegendFilingApplicationDetails",
+                            IsDeleted = false,
                             Text = "Radicación de la solicitud"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTNWEWN4SK3J0X8VA9",
+                            Id = new Guid("31b935da-23c2-447d-af08-c3f80255e213"),
                             Code = "LegendSpectrumE",
+                            IsDeleted = false,
                             Text = "Sistema de Simulación"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTY65WGV92KJF5SMG3",
+                            Id = new Guid("6fa04af1-7d1c-4422-89f2-b63575d7f4ba"),
                             Code = "LogonMessage",
+                            IsDeleted = false,
                             Text = "Escriba su usuario y contraseña de Registro TIC"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHG1PXV5NF6NSWT5E",
+                            Id = new Guid("2a083c90-90dc-4394-978f-fbf984857e96"),
                             Code = "LogonMessageAdic",
+                            IsDeleted = false,
                             Text = "o envíe un correo a minticresponde@mintic.gov.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTGDX9XV4ZJAV24MDF",
+                            Id = new Guid("820b3428-574b-4e9d-bb03-67729f465f8c"),
                             Code = "LogonMessageFront",
+                            IsDeleted = false,
                             Text = "Señor funcionario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9WBSEDHW93Q7YZ76",
+                            Id = new Guid("500a21fb-5b1f-4a4b-9a88-28e7c83131b5"),
                             Code = "MailDesarrolladorModuloResolucionesSinGarantia",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTN5QB99Z1QT0D776F",
+                            Id = new Guid("4a08a91a-3781-46f1-acab-caa251305074"),
                             Code = "MailRevisorModuloResolucionesSinGarantia",
+                            IsDeleted = false,
                             Text = "andres.rodriguez@tesamerica.com.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTH9J1N4G2X3KW4Z7V",
+                            Id = new Guid("3c417086-2c7f-4526-921c-403352a2b453"),
                             Code = "MailSmtpHost",
+                            IsDeleted = false,
                             Text = "smtp.gmail.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTMX7VGDX08B8NKET",
+                            Id = new Guid("49e3d2cd-26aa-4a63-a7b7-9a0ce52b1459"),
                             Code = "MailSmtpPassword",
+                            IsDeleted = false,
                             Text = "Tesamerica123*"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT898VNQACE2NT8QWQ",
+                            Id = new Guid("235586b4-39ac-47cd-bacd-f00206bf5fdc"),
                             Code = "MailSmtpPort",
+                            IsDeleted = false,
                             Text = "587"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQ88NRK0C34JPEWKG",
+                            Id = new Guid("9c1e8fc3-e361-4b71-8ba9-1beea34582b1"),
                             Code = "MailUsername",
+                            IsDeleted = false,
                             Text = "Soporte Tesamerica"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTDQVWVKJ2R841QCQV",
+                            Id = new Guid("4d90fc56-039a-4087-b22b-93cc9aead83c"),
                             Code = "MainPattern",
+                            IsDeleted = false,
                             Text = "[ .;,:¿?¡!(){}&%$_*+\\'''#|=º^¨~-]"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTK4XA54GQFF279X3N",
+                            Id = new Guid("889ac093-e7e2-4181-bb05-48b2bdc03370"),
                             Code = "MainPatternAddress",
+                            IsDeleted = false,
                             Text = "[a-z .;,:ñ¿?¡!(){}&%$_*+\\'@''/\\\\#|=º^¨~-]"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTREP2AX9ZRMRB0N2B",
+                            Id = new Guid("b106847d-81b0-48ee-8585-68daac3ef0df"),
                             Code = "MainPatternRazonSocial",
+                            IsDeleted = false,
                             Text = "[^a-z]"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTATJN3WS972MSGH2Z",
+                            Id = new Guid("93446caa-58b4-4de7-9939-d75d3f326353"),
                             Code = "MensajeAdvertenciaCartera",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZGSHMRJNY7W4GWA6",
+                            Id = new Guid("9eb4a3ed-579f-4aa9-a6fd-e10a345437c5"),
                             Code = "MensajeAdvertenciaGarantias",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT5PEJH27REJZB3G0B",
+                            Id = new Guid("e3c95193-7658-436e-90d8-bc6ace37d88d"),
                             Code = "MensajeAdvertenciaRTIC",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCV19X7EJKNNPACGX",
+                            Id = new Guid("4409eb76-bc5e-49b2-9568-3c497ec51265"),
                             Code = "MensajeAdvertenciaRTICDiferenciasNOPSO",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTPWE19MSJ382J6Y55",
+                            Id = new Guid("6a78cb69-264d-4c76-a6af-dc6bf167e6bf"),
                             Code = "MensajeAdvertenciaRTICDiferenciasPSO",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQ3TESE4NYZKMXENB",
+                            Id = new Guid("a9a8d3fa-207c-4825-938b-e87197c5672a"),
                             Code = "MensajeBloqueoCartera",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1DNBR7KEEM17V395",
+                            Id = new Guid("e2ea80fe-6007-44bb-a596-740759790b2d"),
                             Code = "MensajeBloqueoGarantias",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3HR26RPQHBNBWMA2",
+                            Id = new Guid("7f82f239-6a59-47a2-ae88-f0d11180e220"),
                             Code = "MensajeBloqueoRTIC",
+                            IsDeleted = false,
                             Text = "Señor usuario"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTKB0DRXJ8JMJNESHQ",
+                            Id = new Guid("a484a525-d54a-4740-87db-8604b75d8ba0"),
                             Code = "MensajeCrearExpediente",
+                            IsDeleted = false,
                             Text = "<div class='nombre_campo'><p style='margin:20px; text-align:justify;'>Señor usuario:</p><br/><p style='margin:20px; text-align:justify;'>El usuario acepta que a través del registro en el sitio web"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA2GX95328KE9NFW3",
+                            Id = new Guid("5f1257d7-0771-4efd-99df-991c87ad90c9"),
                             Code = "MensajeDuranteMantenimiento",
+                            IsDeleted = false,
                             Text = "El Ministerio de Tecnologías de la Información/Fondo Único de TIC informa que se encuentra realizando un mantenimiento al aplicativo desde <u>las {0} hasta las {1} Durante este mantenimiento los servicios no están disponibles.</u> Agradecemos su comprensión."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTNDNB9B56RE3140VJ",
+                            Id = new Guid("b6260d14-95bd-496e-b8c6-1ff49e8c439d"),
                             Code = "MensajeInfoEmergenciaSeguridad",
+                            IsDeleted = false,
                             Text = "Las solicitudes que se realizan en esta sección se encuentran exceptuadas del procedimiento de selección objetiva"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSY7BPXGGR33WYB5A",
+                            Id = new Guid("d7d6fc47-1550-40a6-9c6d-0b3bc2e89923"),
                             Code = "MensajeInfoNOPSO",
+                            IsDeleted = false,
                             Text = "Las solicitudes que se realizan en esta sección corresponden a las que pueden ser tramitadas fuera de un Proceso de Selección Objetiva- PSO"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTNRZ9MGAEJAT9KJNP",
+                            Id = new Guid("5c3edb0d-2b26-4e6f-9046-93fcfffcb5fc"),
                             Code = "MensajeInfoPSOP1",
+                            IsDeleted = false,
                             Text = "Las solicitudes que se realizan en esta sección deben ser tramitadas bajo un Proceso de Selección Objetiva- PSO"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTVGXKC0B1XM7FJF94",
+                            Id = new Guid("edaf84ce-0029-430c-bfab-e91c8b78b879"),
                             Code = "MensajePrevioMantenimiento",
+                            IsDeleted = false,
                             Text = "El Ministerio de Tecnologías de la Información/Fondo Único de TIC informa que el próximo <b>{0} hasta las {1}</b> realizara mantenimiento al aplicativo. <b>Durante este mantenimiento los servicios no estarán disponibles.</b> Agradecemos su comprensión no ingresando a la aplicación en esta franja de tiempo."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZDN70ANS7Q4H9YAM",
+                            Id = new Guid("afa63ea3-4983-4cb7-836d-4e6f42c74031"),
                             Code = "MetodoEnvioAlfa",
+                            IsDeleted = false,
                             Text = "TL"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTF62ABXYCM7ANZKGV",
+                            Id = new Guid("2f3ba290-1ec8-44e8-bb28-abecf82b1244"),
                             Code = "MotivoRechazoCartera",
+                            IsDeleted = false,
                             Text = "No cumplir con lo establecido en el numeral 2 del artículo 3 de la resolución 485 de 2024"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTPZZEA46CA6M9895K",
+                            Id = new Guid("d0fd4ae1-c6a8-41ea-9372-8328f4a83d30"),
                             Code = "MotivoRechazoGarantias",
+                            IsDeleted = false,
                             Text = "No cumplir con lo establecido en el numeral 3 del artículo 3 de la resolución 485 de 2024"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTAJ0831E3YNCAA2MY",
+                            Id = new Guid("6fa06ba0-85c9-4011-9d37-3a4fa187b558"),
                             Code = "MotivoRechazoRUTIC",
+                            IsDeleted = false,
                             Text = "No cumplir con lo establecido en el numeral 1 del artículo 3 de la resolución 485 de 2024"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTMD2YKG596BZXBKRH",
+                            Id = new Guid("d8224f63-3528-406f-836d-b7e34ebe82ef"),
                             Code = "NaturalezaAlfaSolicitud",
+                            IsDeleted = false,
                             Text = "100"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTPE85FM668HWY0BPS",
+                            Id = new Guid("fc03e011-5a2f-4823-87f5-02de13a7935f"),
                             Code = "NitAne",
+                            IsDeleted = false,
                             Text = "9003342653"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTN8P1CB41VG26KEBJ",
+                            Id = new Guid("74038d86-b41f-435f-b2b5-af62f611fed4"),
                             Code = "NitMintic",
+                            IsDeleted = false,
                             Text = "89999953-1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTGMPB528DG0D98Z93",
+                            Id = new Guid("3c5e70fd-7816-45ef-81df-6d5795474353"),
                             Code = "NombreAne",
+                            IsDeleted = false,
                             Text = "Agencia Nacional del Espectro"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT38T0CWB75Y3TAT31",
+                            Id = new Guid("660360f6-33b2-432c-8fa5-99d134d6ea60"),
                             Code = "NombreArchivoAlfaAnalisisAdministrativo",
+                            IsDeleted = false,
                             Text = "Registro_Fin_Analisis_Administrativo_Solicitud_{0}_{1:ddMMyyHHmmss}.rtf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZYEWWKDHN1EFR4VX",
+                            Id = new Guid("494e811b-d4f7-4a09-beee-8f42e1d04546"),
                             Code = "NombreArchivoAlfaAnalisisTecnico",
+                            IsDeleted = false,
                             Text = "Aprobacion_Tecnica_Solicitud_{0}_{1:ddMMyyHHmmss}.rtf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3EGGVWTYSVRQC6NZ",
+                            Id = new Guid("c2325235-e737-456e-9c8f-e191bc89ac16"),
                             Code = "NombreArchivoAlfaClosing",
+                            IsDeleted = false,
                             Text = "Aprobacion_Final_Solicitud_{0}_{1:ddMMyyHHmmss}.rtf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6ZKCJBY4YF7MT81E",
+                            Id = new Guid("c907998e-f2a8-4bfd-b9d0-ca1025d2f95e"),
                             Code = "NombreArchivoAlfaRadicacion",
+                            IsDeleted = false,
                             Text = "Radicacion_Solicitud_{0}_{1:ddMMyyHHmmss}.xml"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTNGH9DMBS2HN7XN1J",
+                            Id = new Guid("06bd583a-9b62-440c-9997-e6ee9698ef1f"),
                             Code = "NombreArchivoAlfaRadicarArchivo",
+                            IsDeleted = false,
                             Text = "Radicación_Archivo_Solicitud_{0}_{1:ddMMyyHHmmss}.rtf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3D9B8JE1VRKZ0H9V",
+                            Id = new Guid("f7334048-94c5-49d4-9adf-9b7a4b560c52"),
                             Code = "NombreArchivoAlfaRechazoSolicitud",
+                            IsDeleted = false,
                             Text = "Rechazo_Solicitud_{0}_{1:ddMMyyHHmmss}.pdf"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTFPGZ5AJ9HN21CQV1",
+                            Id = new Guid("d62ae6bf-8e9b-417d-8f8b-3a5ef935d400"),
                             Code = "NombreMintic",
+                            IsDeleted = false,
                             Text = "Ministerio TIC"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTKCEQ74XGD8JXRNWQ",
+                            Id = new Guid("c7c40cf3-9373-4c2e-8440-5f9b9be47ed4"),
                             Code = "NumeroArchivosRadicacion",
+                            IsDeleted = false,
                             Text = "2"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCSBD806EXYF1WPBF",
+                            Id = new Guid("fdad100f-d956-4a6a-a542-cbab4f71e08e"),
                             Code = "NumeroArchivosRadicacionSolDirecta",
+                            IsDeleted = false,
                             Text = "9"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTW46HYPX0RS9EYSGR",
+                            Id = new Guid("08983775-ad9a-4bb6-8b77-4a128ef43640"),
                             Code = "PaginaMinisterio",
+                            IsDeleted = false,
                             Text = "http://www.mintic.gov.co/"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTEP922BYS8WB3CDX9",
+                            Id = new Guid("eda70921-9620-4ccb-a80b-7530ed226334"),
                             Code = "PasswordAlfa",
+                            IsDeleted = false,
                             Text = "0qLpWZIlpg2zlKSYcj0D"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZRC4TV79MQ6FWD38",
+                            Id = new Guid("4aa8d4a0-93bf-422b-990a-6c683c73075a"),
                             Code = "PasswordRUES",
+                            IsDeleted = false,
                             Text = "k272ki8bLnLpFK7aUuUEzw=="
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTD3JW14RQ1DBR42AB",
+                            Id = new Guid("923e09d5-a4a6-41bd-b9da-396a5c2bffd8"),
                             Code = "PasswordServicioAuraPortalNew",
+                            IsDeleted = false,
                             Text = "1mp3rs0n4t3."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZ4E4JA63ZXTRM18R",
+                            Id = new Guid("5b233fe2-e1f0-4484-bd0b-74711dfb2ba3"),
                             Code = "PointToPointAndPointToMultipointExplanation",
+                            IsDeleted = false,
                             Text = "Si por algún motivo"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT9WKGY9DG10HTP6VW",
+                            Id = new Guid("86ffc2bc-b55d-40ae-bbc5-ce4dd2eff578"),
                             Code = "RequiredFieldImageMessage",
+                            IsDeleted = false,
                             Text = "Campo requerido"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTVVSN09DGVEXMSQCA",
+                            Id = new Guid("3bb7eb89-d9e6-49c8-a847-6d2474a34125"),
                             Code = "Resolucion",
+                            IsDeleted = false,
                             Text = "485 de 2024"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2SEBVMBH7GNGSVZ0",
+                            Id = new Guid("7e63563c-decd-4a69-9f94-9e864a7547cb"),
                             Code = "ResumenTecnicoTexto",
+                            IsDeleted = false,
                             Text = "En virtud de la(s) solicitud(es) de [TipoTramite_NumRadicado]"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTQ91ZAGYK7370PXR6",
+                            Id = new Guid("aa41601e-41b4-4f45-a646-6cc1a8a18dee"),
                             Code = "RolesPermisoModuloResoluciones",
+                            IsDeleted = false,
                             Text = "1,2,3,4,5,6,7,10,21,22,30,57,59,60,61,62,72,73,74,75,76,77,78,79,98,99,100,101,107,108"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT540A7EAGS7DK90YB",
+                            Id = new Guid("282ccac1-579b-4fbf-b5c0-3ba22e0dcce2"),
                             Code = "RolesPermisoRevisionOficio",
+                            IsDeleted = false,
                             Text = "73,74,75,101,107"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2ZQ6B04VJRH8ED04",
+                            Id = new Guid("6e604e5d-c43d-43ac-aad6-4454426257bb"),
                             Code = "RolesPermisoRevisionResoluciones",
+                            IsDeleted = false,
                             Text = "2,3,4,5,6,7,22,57,59,60,61,62,76,77,78,79,99,100,108"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7GFZSQ93FVXYPZS2",
+                            Id = new Guid("cafe6dd1-fa31-4093-b5c8-89355d7b3ce3"),
                             Code = "RolesPermisoVerDocumentacionSolicitudesDirectas",
+                            IsDeleted = false,
                             Text = "30,76,77,78,79,57,59,98,60,61,62,99,100,72,73,74,75,101,107,108"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTDQ2X8FT0RH9R50PZ",
+                            Id = new Guid("65715dd5-b094-46c9-a5cc-400dc545d6cd"),
                             Code = "RutaGetConsultaRUES",
+                            IsDeleted = false,
                             Text = "wsConsultaRUES"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7VX4SKB5AY3AS5BR",
+                            Id = new Guid("4a5a3160-b614-4468-8e15-7d07369b68e1"),
                             Code = "RutaGetTokenRUES",
+                            IsDeleted = false,
                             Text = "wsToken"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTZ6N141315AS7TCGZ",
+                            Id = new Guid("c471f837-2a32-4321-96e4-60c9663c844e"),
                             Code = "Satelital_CorreoFinResolucionMINTIC",
+                            IsDeleted = false,
                             Text = "ebernate@g.com,kballen@g.com,carengifo@g.com,crojas@g.com,aruiz@g.com,nmendez@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJHY8Y7NFTRYHFKN1",
+                            Id = new Guid("a4465825-e31a-4fbe-a35b-7b4eb1d212a5"),
                             Code = "Satelital_FirmaElec_Director",
+                            IsDeleted = false,
                             Text = "dreinales"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4F4RYPN996BAQ29N",
+                            Id = new Guid("dc34a6bd-c290-49eb-b9f6-e7308503b257"),
                             Code = "Satelital_FirmaElec_SubDirector",
+                            IsDeleted = false,
                             Text = "lpineda"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT06FGX7BN24KJWWK3",
+                            Id = new Guid("db42f947-1468-41d4-b28d-92b76886a647"),
                             Code = "Satelital_Portada_ANE",
+                            IsDeleted = false,
                             Text = "Agencia Nacional del Espectro;Solicitudesdeespectro@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTGF3R1058HH290R6Y",
+                            Id = new Guid("295a5dee-4d7d-4183-8904-7499da554396"),
                             Code = "Satelital_Portada_MINTIC",
+                            IsDeleted = false,
                             Text = "Ministerio de Tecnologías de la Información y las Comunicaciones; solicitudessatelital@g.com"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTW2T84ATKR3S4VV61",
+                            Id = new Guid("49e129d7-6bcd-4c0f-adc0-28300e7a09d3"),
                             Code = "SerieDocumentalAlfa",
+                            IsDeleted = false,
                             Text = "100"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYW4GWAEA6N10J5PZ",
+                            Id = new Guid("69ac0be8-c2d5-4460-9f7f-bf69849892f2"),
                             Code = "SolFisicaDiasAdicionalFechaVenc",
+                            IsDeleted = false,
                             Text = "60"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTB70YZ1M53SGH6K28",
+                            Id = new Guid("166e3546-6903-4b07-8dfd-873d44ee88c9"),
                             Code = "Subdireccion_Industria",
+                            IsDeleted = false,
                             Text = "gperdomo@mintic.gov.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2Z97PP8EDBJRE6AQ",
+                            Id = new Guid("23cfa467-3648-4576-a514-69c893e204eb"),
                             Code = "SubdirectorIndustria",
+                            IsDeleted = false,
                             Text = "gperdomo"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTH5TN29G9SFF90YR0",
+                            Id = new Guid("a011c60d-bd7e-4251-9db2-952ca827f392"),
                             Code = "SubdirectorPSO",
+                            IsDeleted = false,
                             Text = "gperdomo"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTTV1W4HGTH87SPJZB",
+                            Id = new Guid("0833b4ab-1644-41c6-ad9a-f0956c355fdd"),
                             Code = "SystemDescription",
+                            IsDeleted = false,
                             Text = "El Sistema para la Gestión del Espectro Radioeléctrico “SGE” permite a los titulares de permiso para el uso del espectro tramitar ante el Ministerio de Tecnologías de la Información y las Comunicaciones"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA6XNH0680QNVM08Y",
+                            Id = new Guid("798e3822-f320-4171-8f57-0e6deed59482"),
                             Code = "TechnicalInformationSummaryNetworkCount",
+                            IsDeleted = false,
                             Text = "Número de redes de la solicitud:"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT1SM3KJ9RZEVTEE3Q",
+                            Id = new Guid("5bc6a2dc-2a25-4ee6-bd96-e7623abd556f"),
                             Code = "TechnicalInformationSummaryNetworkNumber",
+                            IsDeleted = false,
                             Text = "Red número:"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJFXGNYS8KZ60WJ34",
+                            Id = new Guid("d6d7bfe0-59d2-4edf-8be9-c3eb68aa75c3"),
                             Code = "TechnicalInformationSummaryXmlMassivelyUploaded",
+                            IsDeleted = false,
                             Text = "Información cargada masivamente a partir de archivo .xml"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTPQA75MXBDFW31WVQ",
+                            Id = new Guid("180c1396-0d99-4398-8a91-f28217aed208"),
                             Code = "TelefonoAne1",
+                            IsDeleted = false,
                             Text = "3442299"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT8X5V7X7KTQGW8Q4R",
+                            Id = new Guid("835aae51-56ee-464d-9656-3d89e01cfea9"),
                             Code = "TelefonoAne2",
+                            IsDeleted = false,
                             Text = "No disponible"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTWPMWGZNR0K25QWM4",
+                            Id = new Guid("5fd30cc7-d3bd-41ae-bc94-bf6b4c57af44"),
                             Code = "TelefonoMintic1",
+                            IsDeleted = false,
                             Text = "3443460"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT8NCKHY5GSNNDW71D",
+                            Id = new Guid("c58c23eb-a48a-4674-908d-d5e740a7004f"),
                             Code = "TelefonoMintic2",
+                            IsDeleted = false,
                             Text = "No disponible"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT981DJH7ZD2KJP4HJ",
+                            Id = new Guid("fc162218-da2d-436f-9dc5-b3adf01c7aba"),
                             Code = "Temp_File_Espectro_New",
+                            IsDeleted = false,
                             Text = "C:\\SAGE\\EspectroTemporal\\EspectroTemp_Back\\tempdatafile"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSP3BTANF8PK9YZ5P",
+                            Id = new Guid("84f64b35-54f8-4585-8264-139fa9a2d7bb"),
                             Code = "Temp_File_EspectroTemporal",
+                            IsDeleted = false,
                             Text = "C:\\SAGE\\EspectroTemporal\\EspectroTemp_Back\\tempdatafile"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT0XMQ42DKSJM2N15K",
+                            Id = new Guid("7bea86ad-eb37-4f93-94d2-de35ea039719"),
                             Code = "Temp_File_Satelital",
+                            IsDeleted = false,
                             Text = "C:\\SAGE\\SGE\\tempdatafile"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTN8NXB2MEH37KE855",
+                            Id = new Guid("35c435ba-fbcf-4e27-9c32-a0dd522644be"),
                             Code = "Temp_File_Satelital_New",
+                            IsDeleted = false,
                             Text = "C:\\SAGE\\Satelital\\Satelital_Back\\tempdatafile"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTMM2MXG20VZC7ZND5",
+                            Id = new Guid("d4917eb1-77c6-4b89-9ca3-5c3c82fcd49c"),
                             Code = "TermsAndConitions",
+                            IsDeleted = false,
                             Text = "Términos y condiciones: como usuario de la aplicación"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7NVWJYTH7P0BDAQ9",
+                            Id = new Guid("752ad9df-f8e7-48c3-bc09-f318afa20e96"),
                             Code = "TextoDetalleAlfaAnalisisAdministrativo",
+                            IsDeleted = false,
                             Text = "Notificación de Aprobación de Análisis Administrativo de la Solicitud: {0}"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT0SMQ68YPSQB2G3AB",
+                            Id = new Guid("6699dc94-57d8-4db3-bea7-b88a290a1d83"),
                             Code = "TextoDetalleAlfaAnalisisTecnico",
+                            IsDeleted = false,
                             Text = "Notificación de Aprobación de Análisis Técnico de la Solicitud: {0}"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT7VWGTCQ2CFPHP89J",
+                            Id = new Guid("2b5c9b0b-bce5-4414-9b5b-2223a70e2080"),
                             Code = "TextoDetalleAlfaClosing",
+                            IsDeleted = false,
                             Text = "Notificación de Aprobación final de la Solicitud: {0}"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2X4ZC2D4FWHHWQKW",
+                            Id = new Guid("530a3daf-3616-4a61-b63e-ca299438234d"),
                             Code = "TextoDetalleAlfaRadicacion",
+                            IsDeleted = false,
                             Text = "Radicación de la Solicitud: {0}"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHWHBT5NBSMZVYQ7F",
+                            Id = new Guid("8a137454-e384-466f-a19e-87257a85d254"),
                             Code = "TextoDetalleAlfaRadicarArchivo",
+                            IsDeleted = false,
                             Text = "Notificación de Radicación de Archivo  de la Solicitud: {0}"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT35CB650HVDRQS6YG",
+                            Id = new Guid("71529fe9-618e-42ed-af71-6398422f9092"),
                             Code = "TextoDetalleAlfaRechazoSolicitud",
+                            IsDeleted = false,
                             Text = "Notificación de Rechazo de la Solicitud: {0}"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJP071CWGBHA8K518",
+                            Id = new Guid("030e02f4-6abb-49d1-9ecf-e706860ca9ed"),
                             Code = "TextoFirmaCertificadoEspectro",
+                            IsDeleted = false,
                             Text = "Asesora del Despacho del Viceministerio de Transformación Digital encargada de las funciones del Subdirector para la Industria de Comunicaciones"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYNQKZBYG2Z0DRK8J",
+                            Id = new Guid("beab24d9-894f-4828-ae7d-72a769192a83"),
                             Code = "TextoNotificacionSigpol",
+                            IsDeleted = false,
                             Text = "Señor usuario una de sus garantías presenta una novedad"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4ZSHER2J99NM0YV8",
+                            Id = new Guid("3d0d20da-6a07-4da2-8275-cc6ae1ab93c7"),
                             Code = "TextoRefRadicadoAnalisisTecnico",
+                            IsDeleted = false,
                             Text = "Resultado de Análisis Técnico de la Solicitud con radicado MINTIC No. {0} del {1}."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTMBDEEN78PVKKRTXD",
+                            Id = new Guid("a77d00c8-4949-45e0-a33e-28fe814f78f9"),
                             Code = "TextoRefRegistroAnalisisAdministrativo",
+                            IsDeleted = false,
                             Text = "Traslado para Análisis Técnico de la Solicitud con radicado No. {0} del {1}."
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTEH34NZ462Z4WJMB4",
+                            Id = new Guid("8489b11e-45c7-4347-9b97-b849b82bab04"),
                             Code = "TiempoAutoguardadoMilisegundos",
+                            IsDeleted = false,
                             Text = "300000"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4TJKTNMY9EG0JAG5",
+                            Id = new Guid("49d9a11e-047a-49c8-a465-56509fa36244"),
                             Code = "TiempoTokenMatrizANE",
+                            IsDeleted = false,
                             Text = "50000"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3499DRE0B2BKMM53",
+                            Id = new Guid("c2d9793f-876f-43c7-8e61-5c29eae30b11"),
                             Code = "TiposResolucionRenovacionOtorga",
+                            IsDeleted = false,
                             Text = "1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTGDS9NECC3FD8EX5F",
+                            Id = new Guid("4c1a1ffb-1070-411f-81ae-f7a260a1d5ae"),
                             Code = "TokenTMP_Email",
+                            IsDeleted = false,
                             Text = "soporte.sge@mintic.gov.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTM2ECCX54PPCT504B",
+                            Id = new Guid("e2b2b45b-e137-494f-bb5a-a6632af100dc"),
                             Code = "TokenTMP_Rol",
+                            IsDeleted = false,
                             Text = "128"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSQC95QK93CWTFBXH",
+                            Id = new Guid("abb70e3d-9ab0-4a31-872c-1f2702fb8ee0"),
                             Code = "TokenTMP_SecretKey",
+                            IsDeleted = false,
                             Text = "F4209FA7-FAF6-4BF0-8A5E-783BE439DF9E"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTV5ACB1DN2KXKFVA1",
+                            Id = new Guid("ec551919-3780-4905-933d-c00a4f3d6bbf"),
                             Code = "TokenTMP_TypeIdent",
+                            IsDeleted = false,
                             Text = "NIT"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTYSEEAP3HH7933191",
+                            Id = new Guid("16164331-ce02-4d16-afac-e62c20979b87"),
                             Code = "TokenTMP_User",
+                            IsDeleted = false,
                             Text = "Sistema de Gestión del Espectro"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTY322XBXBQFSCGVAN",
+                            Id = new Guid("7c860e43-9a83-4c36-987a-856d09b8130a"),
                             Code = "UbicacionDocumentosSGE",
+                            IsDeleted = false,
                             Text = "C:\\SAGE\\DocumentosSGE\\"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6833TEZ61762ZK8Z",
+                            Id = new Guid("4dfafedb-4f21-4ea8-8050-4cbbe31057c5"),
                             Code = "UrlImportSpectrumE",
+                            IsDeleted = false,
                             Text = "http://simulacion.ane.gov.co:8088/se/portal/ane/loginproc.php?"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTDZC9G6J41JX3G8BA",
+                            Id = new Guid("cab53b36-b14f-4019-9819-0277aee92240"),
                             Code = "UrlLoginSpectrumE",
+                            IsDeleted = false,
                             Text = "http://simulacion.ane.gov.co:8088/se/portal/ane/loginproc.php?"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6DS0DP08WJMF501T",
+                            Id = new Guid("2cef1604-d1a3-4e0e-8d88-dbc2ad1c105c"),
                             Code = "UserAlfa",
+                            IsDeleted = false,
                             Text = "usersage"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTDFMWBV73C0G8N98R",
+                            Id = new Guid("b3083413-b806-467e-ae1a-2eeb98721200"),
                             Code = "UsernameRUES",
+                            IsDeleted = false,
                             Text = "UserMinTic"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTG82212JMZY9WS938",
+                            Id = new Guid("f466e5be-29d9-4a3e-85ce-1f301cd443b6"),
                             Code = "UsuarioServicioAuraPortalNew",
+                            IsDeleted = false,
                             Text = "mintic/bpmimpersonate"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTXM95YF8DT6K6A1TN",
+                            Id = new Guid("117b14cf-705f-437d-bd01-41debf15b435"),
                             Code = "VersionFormatosAnexos_Satelital",
+                            IsDeleted = false,
                             Text = "V1.4"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT2SDZX6H35BZ35X5S",
+                            Id = new Guid("99002e12-278f-463e-b314-58c3dea3b4a9"),
                             Code = "WfTipoAlfa",
+                            IsDeleted = false,
                             Text = "0"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHG9ADAC148JDBGX5",
+                            Id = new Guid("b479b3a8-504e-4bbf-955b-6aa3cfd5d06a"),
                             Code = "WfTipoAlfaInterno",
+                            IsDeleted = false,
                             Text = "1"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT3D8BAEW9ZYK4K0J1",
+                            Id = new Guid("768f1402-599a-4cad-856b-148b1f1bebdd"),
                             Code = "xmlnsazs",
+                            IsDeleted = false,
                             Text = "http://www.analitica.com.co/AZSign/Esquemas"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT8NNT2NZN9JZC5YZK",
+                            Id = new Guid("9b6cad03-ac49-4a7a-ae59-b49fc9ef8af6"),
                             Code = "xmlnsxsi",
+                            IsDeleted = false,
                             Text = "http://www.w3.org/2001/XMLSchema-instance"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTCAMAXMBX1NB93N80",
+                            Id = new Guid("a16cb569-4510-4e34-ae5f-0de98d99e6ec"),
                             Code = "xsischemaLocation",
+                            IsDeleted = false,
                             Text = "http://www.analitica.com.co/AZSign/Esquemas file:///F:/AZSign/Producto/AZSign/WebServices/WS-AZSign.xsd"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT5Q6C03WMFMMMP3BY",
+                            Id = new Guid("9d2061b6-7d43-4957-a268-653354b11e57"),
                             Code = "AutenticacionTMP_Pruebas",
+                            IsDeleted = false,
                             Text = "https://pruebas.tesmonitorplanning.com/TesMonitorPlanning/TesMonitorPlanningWeb/index.html?ID="
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT6WK2J43QQDYHZJ1J",
+                            Id = new Guid("7ac31c99-cbb7-4e65-a5ed-ea5577d8737c"),
                             Code = "AutenticacionTMP",
                             Description = "https://espectro-co.ane.gov.co/TesMonitorPlanning/TesMonitorPlanningWeb/index.html?ID=",
+                            IsDeleted = false,
                             Text = "https://espectro-co.ane.gov.co/TesMonitorPlanning/TesMonitorPlanningWeb/index.html?ID="
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT5DXXRKRNMFJVS790",
+                            Id = new Guid("94b08a49-b9f5-4c94-8d95-bc23cc48c934"),
                             Code = "CorreoCertificadoURL",
                             Description = "Link consumo para el servicio de Notificaciones (IntegraTIC)",
+                            IsDeleted = false,
                             Text = "https://cert-integratic.mintic.gov.co/Notificaciones/WebServices/SOAP/"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTHHW96WZARQ4GEAAM",
+                            Id = new Guid("2945b911-f10a-406a-aec3-872625dc2f67"),
                             Code = "DocumentosSGE_URL",
                             Description = "URL de documentos del SGE",
+                            IsDeleted = false,
                             Text = "https://cert-gestion-espectro.mintic.gov.co/DocSGE/DocSGE_Front"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSV9X8SD2GK2Q7MR5",
+                            Id = new Guid("8aff8628-25c6-4150-829a-1340efecd1f3"),
                             Code = "FirmaElectronicaAZURL",
                             Description = "Link consumo para el servicio de firma electrónica (AZSign)",
+                            IsDeleted = false,
                             Text = "https://azsign.analitica.com.co/WebServices/SOAP/"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTJD3X88KCK6JT8FZ2",
+                            Id = new Guid("f80f844b-b78e-429f-a763-15096d774d70"),
                             Code = "FlashPlayer",
                             Description = "https://get.adobe.com/es/flashplayer/",
+                            IsDeleted = false,
                             Text = "https://get.adobe.com/es/flashplayer/"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTE3V9F1K644XM029M",
+                            Id = new Guid("7d7f786b-8b20-44e4-ac94-b3745cbe2429"),
                             Code = "PrivacyPolicy",
                             Description = "Ver el texto completo",
+                            IsDeleted = false,
                             Text = "http://www.mintic.gov.co/index.php/privacidad-condiciones-uso"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTY7FY5SPVC9HS20B8",
+                            Id = new Guid("c9c70b78-c4b3-4f4f-bfb3-5609c6d69b15"),
                             Code = "RegistroTicUrl",
                             Description = "Registro de TIC",
+                            IsDeleted = false,
                             Text = "http://www.mintic.gov.co/portal/604/w3-article-6398.html"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTN41M400PS71MMN0P",
+                            Id = new Guid("8954f303-8d05-4a99-99c2-78e5860bb7e1"),
                             Code = "ServicioAuraQuantic",
                             Description = "Link de consumo para servicio AuraQuantic",
+                            IsDeleted = false,
                             Text = "https://uatbpm-integraciones.mintic.gov.co:8001/ServiciosRUTIC/api/Rutic/ConsultarDatosAdministrativos"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTA8N564H7CYZKKRRB",
+                            Id = new Guid("659119fb-f785-4272-b4a8-d567c0410c21"),
                             Code = "ServicioRUES",
                             Description = "Link de consumo para el servicio RUES",
+                            IsDeleted = false,
                             Text = "http://10.100.101.174/r1/CO-QA/GOB/CONFECAMARAS-0001/RUES/"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTSSPCPYNEKCAS24ZV",
+                            Id = new Guid("6597dc3f-b06f-47a0-8178-dc97e392a083"),
                             Code = "ServicioSGE-RUES",
                             Description = "Link de consumo para el servicio SGE-RUES",
+                            IsDeleted = false,
                             Text = "http://salicaria:8749/api/rues/consultaRUES"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTRHBDWEZ3Q0NV1P03",
+                            Id = new Guid("530d7209-a0c4-4f36-a256-fc50db081a27"),
                             Code = "ServicioSGE-RUESLocal",
                             Description = "Link de consumo para el servicio SGE-RUES",
+                            IsDeleted = false,
                             Text = "http://192.168.0.10:8749/api/rues/consultaRUES"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTPHNPRSMGW7KSAKRM",
+                            Id = new Guid("c64309e8-3cb3-4d03-84d9-90f74f03bec2"),
                             Code = "SupportEmail",
                             Description = "(soporte.sge@mintic.gov.co)",
+                            IsDeleted = false,
                             Text = "mailto:soporte.sge@mintic.gov.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XTRJ0QB63BCF713C7X",
+                            Id = new Guid("be4489ba-205e-4d6d-bb29-e3c20c90bff3"),
                             Code = "SupportEmail_Prueba",
                             Description = "rsandoval@mintic.gov.co",
+                            IsDeleted = false,
                             Text = "mailto:rsandoval@mintic.gov.co"
                         },
                         new
                         {
-                            Id = "01J4G2Z4XT4KRHBY9KCXJ3FHZG",
+                            Id = new Guid("d5db93e7-a05b-4860-afdc-8d4cebbdfd0f"),
                             Code = "UrlFirmaElectronica",
                             Description = "URL de consumo para el servicio de firma electrónica",
+                            IsDeleted = false,
                             Text = "https://azsign.analitica.com.co/WebServices/SOAP/"
                         });
                 });
 
-            modelBuilder.Entity("SGE.Domain.ProcessAggregate.Entities.Procedure", b =>
+            modelBuilder.Entity("SGE.Domain.ProcedureAggregate.Procedure", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -2475,20 +2849,20 @@ namespace SGE.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d9a6b405-d552-4792-8ec5-588647ee9b67",
-                            Name = "Otorgamiento de frecuenias"
+                            Id = new Guid("7094ed31-49d9-4aed-8faa-d456d33d370f"),
+                            Name = "Modificaciones de parametros técnicos"
                         },
                         new
                         {
-                            Id = "b106bb0d-d2ad-4b56-b644-8fa514c8d3b7",
+                            Id = new Guid("118e29e1-2a44-45b8-90f5-6c05bde4a203"),
                             Name = "Modificaciones de parametros técnicos"
                         });
                 });
 
             modelBuilder.Entity("SGE.Domain.ProcessAggregate.Process", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("DeletedOnUtc")
                         .HasColumnType("datetime2");
@@ -2507,7 +2881,7 @@ namespace SGE.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "87bd871f-ab3c-46da-81c8-3f1e8dd27dfe",
+                            Id = new Guid("8f335e81-a531-4276-9ec9-e31497b437e7"),
                             IsDeleted = false,
                             Name = "Televisión"
                         });
@@ -2537,6 +2911,367 @@ namespace SGE.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Reminders");
+                });
+
+            modelBuilder.Entity("SGE.Domain.TermAggregate.Term", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("DeletedOnUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ParentId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.HasIndex("ParentId");
+
+                    b.ToTable("Terms", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "01J4NC0YB3WF7ZSF13S9Z2B611",
+                            Code = "PERSONA_TIPO",
+                            IsDeleted = false,
+                            Name = "Tipo de persona"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB33MY88DF1R33HVPGK",
+                            Code = "PERSONA_TIPO_NATURAL",
+                            IsDeleted = false,
+                            Name = "Natural",
+                            ParentId = "01J4NC0YB3WF7ZSF13S9Z2B611"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3FZ58BNQZEVAGGD5B",
+                            Code = "PERSONA_TIPO_JURIDICA",
+                            IsDeleted = false,
+                            Name = "Juridica",
+                            ParentId = "01J4NC0YB3WF7ZSF13S9Z2B611"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB39WF56DG4TRN7Y1X5",
+                            Code = "SOLICITUD_ESTADO",
+                            IsDeleted = false,
+                            Name = "Estados de una solicitud"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3BG8C601TN4C18JBK",
+                            Code = "SOLICITUD_ESTADO_PENDIENTE_RADICACIÓN",
+                            Description = "Solicitud que no ha sido radicada",
+                            IsDeleted = false,
+                            Name = "Pendiente Radicación",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3EDYD2JMZWV2Z7N83",
+                            Code = "SOLICITUD_ESTADO_EN_REVISION",
+                            Description = "Solicitud radicada y en flujo de revisión",
+                            IsDeleted = false,
+                            Name = "En revision",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB382ZWZ1XK2TNSAEA5",
+                            Code = "SOLICITUD_ESTADO_APROBADA",
+                            Description = "Solicitud aprobada",
+                            IsDeleted = false,
+                            Name = "Aprobada",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3FZC0SEJ14C9NGJ0P",
+                            Code = "SOLICITUD_ESTADO_REQUERIDA",
+                            Description = "Solicitud requerida",
+                            IsDeleted = false,
+                            Name = "Requerida",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3A9S7YTFJD78D1JGC",
+                            Code = "SOLICITUD_ESTADO_RECHAZADA",
+                            Description = "Solicitud rechaza",
+                            IsDeleted = false,
+                            Name = "Rechazada",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3JJTTQ586869Y9WX2",
+                            Code = "SOLICITUD_ESTADO_DESISTIDA",
+                            Description = "Solicitud desistida por el operador",
+                            IsDeleted = false,
+                            Name = "Desistida",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB31DKBNV2R54KP4K3D",
+                            Code = "SOLICITUD_ESTADO_DESISTIDA_TACITAMENTE",
+                            Description = "Solicitud rechazada por no realizar la subsanación en el tiempo establecido",
+                            IsDeleted = false,
+                            Name = "Desistida tacitamente",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3W8K4JA3AF00FAQ27",
+                            Code = "SOLICITUD_ESTADO_SUBSANADA",
+                            Description = "El operador subsana los requerimientos",
+                            IsDeleted = false,
+                            Name = "Subsanada",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3SYSYBN5YS2EZA0A0",
+                            Code = "SOLICITUD_ESTADO_REQUERIMIENTO_EN_COORDINACIÓN",
+                            Description = "El evaluador requiere uno o más documentos y está pendiente la aprobación del requerimiento por parte del coordinador",
+                            IsDeleted = false,
+                            Name = "Requerimiento en coordinación",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB36S69T2VBVKNRGVHD",
+                            Code = "SOLICITUD_ESTADO_GENERANDO_RESOLUCIÓN",
+                            Description = "La solicitud fue aprobada por ambas entidades (MinTIC-ANE) y pasa al flujo de resolución",
+                            IsDeleted = false,
+                            Name = "Generando Resolución",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3FWS7J33G04J1SHX9",
+                            Code = "SOLICITUD_ESTADO_DEVOLUCIÓN_REQUERIMIENTO",
+                            Description = "El coordinador devuelve el requerimiento al evaluador para que vuelva a revisar",
+                            IsDeleted = false,
+                            Name = "Devolución requerimiento",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3W65XRK3GGQ5MEHVW",
+                            Code = "SOLICITUD_ESTADO_RESOLUCIÓN_GENERADA",
+                            Description = "El proyector genera la resolución",
+                            IsDeleted = false,
+                            Name = "Resolución Generada",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3SP4QNAF2ZZX4TFNT",
+                            Code = "SOLICITUD_ESTADO_RESOLUCIÓN_APROBADA",
+                            Description = "La resolución finaliza el flujo y se envia a IntegraTIC",
+                            IsDeleted = false,
+                            Name = "Resolución aprobada",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3E17GQF1WD597GN00",
+                            Code = "SOLICITUD_ESTADO_RECHAZADA_PENDIENTE",
+                            Description = "Solicitud aprobada por la ANE (CT generado) y rechazada por MinTIC. Pendiente de devolver el CT",
+                            IsDeleted = false,
+                            Name = "Rechazada Pendiente",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3TW4ECBDSFT6TBH8M",
+                            Code = "SOLICITUD_ESTADO_DESISTIDA_TÁCITAMENTE_PENDIENTE",
+                            Description = "La fecha limite de subsanación se venció y la ANE puede aumentar el plazo de subsanación",
+                            IsDeleted = false,
+                            Name = "Desistida Tácitamente Pendiente",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3174TYR28HD52AA30",
+                            Code = "SOLICITUD_ESTADO_DESISTIDA_PENDIENTE",
+                            Description = "La solicitud fue aprobada por la ANE y genero CT, y el operador la desiste. Pendiente devolver el CT",
+                            IsDeleted = false,
+                            Name = "Desistida Pendiente",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB36J5KS1456B31TX3M",
+                            Code = "SOLICITUD_ESTADO_GENERANDO_OFICIO",
+                            Description = "La solicitud fue rechada por alguna de las dos entidades (MinTIC-ANE) y pasa al flujo de oficio",
+                            IsDeleted = false,
+                            Name = "Generando Oficio",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3Y6WX2M6K6YK4V330",
+                            Code = "SOLICITUD_ESTADO_OFICIO_GENERADO",
+                            Description = "El proyector genera el oficio",
+                            IsDeleted = false,
+                            Name = "Oficio Generado",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3SM2KSA7KJENHRRBT",
+                            Code = "SOLICITUD_ESTADO_OFICIO_APROBADO",
+                            Description = "El oficio finaliza el flujo, es aprobado y se envia para firma electrónica",
+                            IsDeleted = false,
+                            Name = "Oficio Aprobado",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3WYJMRXQ9GW2VFGHF",
+                            Code = "SOLICITUD_ESTADO_DEVOLUCIÓN_RESOLUCIÓN",
+                            Description = "El proceso esta en el flujo de resolución y se devuelve a la ANE para volver a revisar",
+                            IsDeleted = false,
+                            Name = "Devolución Resolución",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3CKWW30655XZKD6NH",
+                            Code = "SOLICITUD_ESTADO_RECHAZO_ADMINISTRATIVO",
+                            Description = "La solicitud se rechaza por cartera, garantías, RUTIC u otro motivo general",
+                            IsDeleted = false,
+                            Name = "Rechazo Administrativo",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3P5H2RMWP627Q42H3",
+                            Code = "SOLICITUD_ESTADO_RECHAZO_ADMINISTRATIVO_EN_COORDINACIÓN",
+                            Description = "El evaluador rechazo la solicitud por cartera, garantías, RUTIC u otro motivo general, y está pendiente la aprobación del rechazo por parte del coordinador",
+                            IsDeleted = false,
+                            Name = "Rechazo Administrativo en coordinación",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3SRD71YQQSD052FCP",
+                            Code = "SOLICITUD_ESTADO_RECHAZO_EN_COORDINACIÓN",
+                            Description = "El evaluador rechazo uno o más documentos y está pendiente la aprobación del rechazo por parte del coordinador",
+                            IsDeleted = false,
+                            Name = "Rechazo en coordinación",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3273KDDW4DMK56Z70",
+                            Code = "SOLICITUD_ESTADO_RESUMEN_TÉCNICO_GENERADO",
+                            Description = "La ANE genera el resumen técnico",
+                            IsDeleted = false,
+                            Name = "Resumen Técnico Generado",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3M31JKSTR69N3ABP3",
+                            Code = "SOLICITUD_ESTADO_REQUERIMIENTO_POR_CAMPOS",
+                            Description = "La ANE realiza un requerimiento por campos del anexo técnico",
+                            IsDeleted = false,
+                            Name = "Requerimiento por campos",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB321KAF9FD4NGJMZJV",
+                            Code = "SOLICITUD_ESTADO_SUBSANACIÓN_POR_CAMPOS",
+                            Description = "El operador realiza la subsanación del requerimiento por campos del anexo técnico realizado por la ANE",
+                            IsDeleted = false,
+                            Name = "Subsanación por campos",
+                            ParentId = "01J4NC0YB39WF56DG4TRN7Y1X5"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3KKMRZXJ2THHXFYQ8",
+                            Code = "PERSONA_CONDICION",
+                            IsDeleted = false,
+                            Name = "Condición de persona"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3TWPV9V3XW4XVAC3R",
+                            Code = "PERSONA_CONDICION_NACIONAL",
+                            IsDeleted = false,
+                            Name = "Nacional",
+                            ParentId = "01J4NC0YB3KKMRZXJ2THHXFYQ8"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3DXSGVJG914XNGWJD",
+                            Code = "PERSONA_CONDICION_INTERNACIONAL",
+                            IsDeleted = false,
+                            Name = "Extranjero",
+                            ParentId = "01J4NC0YB3KKMRZXJ2THHXFYQ8"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3XCXCSN0MBPK2RRQ6",
+                            Code = "REPRESENTANTE_TIPO",
+                            IsDeleted = false,
+                            Name = "Tipo de representante"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3JM6ZC3PZGTRP1MAR",
+                            Code = "REPRESENTANTE_TIPO_LEGAL_ILIMITADO_EN_SUS_FACULTADES",
+                            Description = "Aquel que de acuerdo con lo expresado en el certificado de existencia y representación legal de la empresa posee plenas facultades para solicitar permisos de espectro a nombre de la empresa que representa.",
+                            IsDeleted = false,
+                            Name = "Representante legal ilimitado en sus facultades",
+                            ParentId = "01J4NC0YB3XCXCSN0MBPK2RRQ6"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB3SKCX67S30MWG3YRC",
+                            Code = "REPRESENTANTE_TIPO_LEGAL_LIMITADO_EN_SUS_FACULTADES",
+                            Description = "Aquel que de acuerdo con lo expresado en el certificado de existencia y representación legal de la empresa no posee plenas facultades para solicitar permisos de espectro a nombre de la empresa que representa, por lo cual, requiere de la presentación de un poder adicional que lo faculte para realizar solicitudes de este tipo.",
+                            IsDeleted = false,
+                            Name = "Representante legal limitado en sus facultades",
+                            ParentId = "01J4NC0YB3XCXCSN0MBPK2RRQ6"
+                        },
+                        new
+                        {
+                            Id = "01J4NC0YB352G75BYBJ9E77EYG",
+                            Code = "REPRESENTANTE_TIPO_APODERADO",
+                            Description = "Aquella persona designada mediante poder general o especial, conferido por el representante legal con facultades para ello, para solicitar permisos de espectro a nombre de la empresa que representa.",
+                            IsDeleted = false,
+                            Name = "Apoderado",
+                            ParentId = "01J4NC0YB3XCXCSN0MBPK2RRQ6"
+                        });
                 });
 
             modelBuilder.Entity("SGE.Domain.Users.User", b =>
@@ -2571,23 +3306,73 @@ namespace SGE.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("ProcessProcedure", b =>
+            modelBuilder.Entity("SGE.Domain.ProcedureAggregate.Procedure", b =>
                 {
-                    b.HasOne("SGE.Domain.ProcessAggregate.Entities.Procedure", "Procedure")
-                        .WithMany()
-                        .HasForeignKey("ProcedureId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.OwnsMany("SGE.Domain.ProcessAggregate.ValueObjects.ProcessId", "ProcessesIds", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
 
-                    b.HasOne("SGE.Domain.ProcessAggregate.Process", "Process")
-                        .WithMany()
-                        .HasForeignKey("ProcessId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"));
 
-                    b.Navigation("Procedure");
+                            b1.Property<Guid>("ProcedureId")
+                                .HasColumnType("uniqueidentifier");
 
-                    b.Navigation("Process");
+                            b1.Property<Guid>("Value")
+                                .HasColumnType("uniqueidentifier")
+                                .HasColumnName("ProcedureProcessId");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("ProcedureId");
+
+                            b1.ToTable("ProcedureProcesses", (string)null);
+
+                            b1.WithOwner()
+                                .HasForeignKey("ProcedureId");
+                        });
+
+                    b.Navigation("ProcessesIds");
+                });
+
+            modelBuilder.Entity("SGE.Domain.ProcessAggregate.Process", b =>
+                {
+                    b.OwnsMany("SGE.Domain.ProcedureAggregate.ValueObjects.ProcedureId", "ProceduresIds", b1 =>
+                        {
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
+
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"));
+
+                            b1.Property<Guid>("ProcessId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<Guid>("Value")
+                                .HasColumnType("uniqueidentifier")
+                                .HasColumnName("ProcessProcedureId");
+
+                            b1.HasKey("Id", "ProcessId");
+
+                            b1.HasIndex("ProcessId");
+
+                            b1.ToTable("ProcessProcedure", (string)null);
+
+                            b1.WithOwner()
+                                .HasForeignKey("ProcessId");
+                        });
+
+                    b.Navigation("ProceduresIds");
+                });
+
+            modelBuilder.Entity("SGE.Domain.TermAggregate.Term", b =>
+                {
+                    b.HasOne("SGE.Domain.TermAggregate.Term", "Parent")
+                        .WithMany("Terms")
+                        .HasForeignKey("ParentId");
+
+                    b.Navigation("Parent");
                 });
 
             modelBuilder.Entity("SGE.Domain.Users.User", b =>
@@ -2635,6 +3420,11 @@ namespace SGE.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("_calendar");
+                });
+
+            modelBuilder.Entity("SGE.Domain.TermAggregate.Term", b =>
+                {
+                    b.Navigation("Terms");
                 });
 #pragma warning restore 612, 618
         }

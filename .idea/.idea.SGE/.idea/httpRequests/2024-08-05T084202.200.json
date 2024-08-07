@@ -1,0 +1,16 @@
+[
+  {
+    "id": "87bd871f-ab3c-46da-81c8-3f1e8dd27dfe",
+    "name": "Televisión",
+    "procedures": [
+      {
+        "id": "b106bb0d-d2ad-4b56-b644-8fa514c8d3b7",
+        "name": "Modificaciones de parametros técnicos"
+      },
+      {
+        "id": "d9a6b405-d552-4792-8ec5-588647ee9b67",
+        "name": "Otorgamiento de frecuenias"
+      }
+    ]
+  }
+]

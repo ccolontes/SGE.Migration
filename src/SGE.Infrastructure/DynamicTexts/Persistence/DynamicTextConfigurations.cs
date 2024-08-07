@@ -12,9 +12,11 @@ public class DynamicTextConfigurations : IEntityTypeConfiguration<DynamicText>
     {
        builder.ToTable("DynamicTexts");
 
+       builder.HasKey(x => x.Id);
+
        builder.Property(x => x.Id)
            .ValueGeneratedNever()
-           .HasConversion(id => id.Value.ToString(), value => DynamicTextId.Create(value));
+           .HasConversion(id => id.Value, value => DynamicTextId.Create(value));
 
        builder.HasIndex(x => x.Code).IsUnique();
        builder.Property(x => x.Description).IsRequired(false);

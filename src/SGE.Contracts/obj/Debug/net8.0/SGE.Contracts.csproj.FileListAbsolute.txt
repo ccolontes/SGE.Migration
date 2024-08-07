@@ -9,3 +9,4 @@ C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contrac
 C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\refint\SGE.Contracts.dll
 C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contracts.pdb
 C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\ref\SGE.Contracts.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Contracts\obj\Debug\net8.0\SGE.Contracts.sourcelink.json

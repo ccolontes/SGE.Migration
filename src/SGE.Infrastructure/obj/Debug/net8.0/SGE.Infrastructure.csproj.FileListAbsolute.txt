@@ -15,3 +15,4 @@ C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.In
 C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\refint\SGE.Infrastructure.dll
 C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.pdb
 C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\ref\SGE.Infrastructure.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Infrastructure\obj\Debug\net8.0\SGE.Infrastructure.sourcelink.json

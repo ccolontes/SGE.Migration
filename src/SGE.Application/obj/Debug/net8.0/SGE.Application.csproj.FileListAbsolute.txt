@@ -13,3 +13,4 @@ C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Appli
 C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\refint\SGE.Application.dll
 C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.pdb
 C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\ref\SGE.Application.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Application\obj\Debug\net8.0\SGE.Application.sourcelink.json

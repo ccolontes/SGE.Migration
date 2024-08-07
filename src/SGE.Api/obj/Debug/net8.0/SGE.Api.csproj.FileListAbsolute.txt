@@ -191,3 +191,4 @@ C:\Users\ingco\Documents\code\SGE\src\SGE.Api\bin\Debug\net8.0\Mapster.dll
 C:\Users\ingco\Documents\code\SGE\src\SGE.Api\bin\Debug\net8.0\Mapster.Core.dll
 C:\Users\ingco\Documents\code\SGE\src\SGE.Api\bin\Debug\net8.0\Mapster.DependencyInjection.dll
 C:\Users\ingco\Documents\code\SGE\src\SGE.Api\bin\Debug\net8.0\Ulid.dll
+C:\Users\ingco\Documents\code\SGE\src\SGE.Api\obj\Debug\net8.0\SGE.Api.sourcelink.json

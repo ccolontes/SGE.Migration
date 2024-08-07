@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-using SGE.Domain.ProcessAggregate.Entities;
+using SGE.Domain.ProcedureAggregate;
+using SGE.Domain.ProcedureAggregate.ValueObjects;
 
 namespace SGE.Infrastructure.Processes.Persistence;
 
@@ -12,8 +13,28 @@ public class ProcedureConfiguration : IEntityTypeConfiguration<Procedure>
         builder.ToTable("Procedures");
 
         builder.HasKey(x => x.Id);
-        builder.Property(x => x.Id);
+
+        builder.Property(x => x.Id)
+            .ValueGeneratedNever()
+            .HasConversion(id => id.Value, value => ProcedureId.Create(value));
+
         builder.Property(x => x.Name).IsRequired();
+
+        builder.OwnsMany(p => p.ProcessesIds, mib =>
+        {
+            mib.WithOwner().HasForeignKey("ProcedureId");
+
+            mib.ToTable("ProcedureProcesses");
+
+            mib.HasKey("Id");
+
+            mib.Property(mi => mi.Value)
+                .ValueGeneratedNever()
+                .HasColumnName("ProcedureProcessId");
+        });
+
+        builder.Metadata.FindNavigation(nameof(Procedure.ProcessesIds))!
+            .SetPropertyAccessMode(PropertyAccessMode.Field);
 
         ApplySeeders(builder);
     }
@@ -21,7 +42,7 @@ public class ProcedureConfiguration : IEntityTypeConfiguration<Procedure>
     private void ApplySeeders(EntityTypeBuilder<Procedure> builder)
     {
         builder.HasData(
-            Procedure.Create("d9a6b405-d552-4792-8ec5-588647ee9b67", "Otorgamiento de frecuenias"),
-            Procedure.Create("b106bb0d-d2ad-4b56-b644-8fa514c8d3b7", "Modificaciones de parametros técnicos"));
+            Procedure.Create(Guid.Parse("7094ed31-49d9-4aed-8faa-d456d33d370f"), "Modificaciones de parametros técnicos"),
+            Procedure.Create(Guid.Parse("118e29e1-2a44-45b8-90f5-6c05bde4a203"), "Modificaciones de parametros técnicos"));
     }
 }
