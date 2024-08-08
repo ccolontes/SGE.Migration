@@ -1,0 +1,6 @@
+POST {{host}}/term/terms_by_codes
+Content-Type: application/json
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}

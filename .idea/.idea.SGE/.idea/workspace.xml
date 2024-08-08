@@ -8,27 +8,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e1540c0-efaf-4db0-beaa-a2a56d0c51c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SGE.Api/Controllers/TermController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Application/Terms/Queries/ListTerms/ListTermsQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Application/Terms/Queries/ListTerms/ListTermsQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Contracts/Terms/GetTermsRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Contracts/Terms/TermResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Domain/Common/Models/AggregateRootId.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Domain/ProcedureAggregate/Procedure.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Domain/ProcedureAggregate/ValueObjects/ProcedureId.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/ValueObjects/ProcessId.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Domain/TermAggregate/Interfaces/ITermsRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Domain/TermAggregate/Term.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Domain/TermAggregate/ValueObjects/TermId.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/Seeders/ApplicationStatesSeeder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/Seeders/PeopleCondictionsSeeder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/Seeders/PeopleTypeSeeder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/Seeders/RepresentativeTypesSeeder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/TermConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/TermsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requests/Terms/ListTerms.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SGE.Api/Mappings/Terms/TermsMappingConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SGE.Application/Terms/Queries/GetTermsByCodes/GetTermsByCodesQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SGE.Application/Terms/Queries/GetTermsByCodes/GetTermsByCodesQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SGE.Contracts/Terms/GetTermsByCodesResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SGE/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SGE/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SGE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SGE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Api/Controllers/ProcessController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/Controllers/ProcessController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/sge.metadata.v8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/sge.metadata.v8.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/sge.projects.v8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/sge.projects.v8.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/sge.strings.v8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/sge.strings.v8.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SGE/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SGE/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SGE/FileContentIndex/c91fcfdb-ab5a-45c4-a7c8-b7a687a434e0.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SGE/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SGE/config/applicationhost.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SGE/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SGE/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SGE/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SGE/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/SGE/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SGE/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/Controllers/ErrorsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/Controllers/ErrorsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/Controllers/TermController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/Controllers/TermController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/Mappings/Processes/ProcessMappingConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/Mappings/Processes/ProcessMappingConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/SGE.Api.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/SGE.Api.csproj.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/bin/Debug/net8.0/SGE.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/bin/Debug/net8.0/SGE.Api.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/bin/Debug/net8.0/SGE.Api.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/bin/Debug/net8.0/SGE.Api.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/bin/Debug/net8.0/SGE.Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/bin/Debug/net8.0/SGE.Api.pdb" afterDir="false" />
@@ -44,14 +44,21 @@
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/SGE.Api.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/ref/SGE.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/ref/SGE.Api.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/refint/SGE.Api.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/Debug/net8.0/refint/SGE.Api.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/SGE.Api.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/SGE.Api.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/SGE.Api.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/SGE.Api.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Api/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Api/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Application/Processes/Queries/ListProcesses/ListProcessesQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/Processes/Queries/ListProcesses/ListProcessesQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Application/Terms/Queries/ListTerms/ListTermsQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Application/Terms/Queries/ListTerms/ListTermsQueryHandler.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/bin/Debug/net8.0/SGE.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/bin/Debug/net8.0/SGE.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/bin/Debug/net8.0/SGE.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/bin/Debug/net8.0/SGE.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/bin/Debug/net8.0/SGE.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/bin/Debug/net8.0/SGE.Domain.dll" afterDir="false" />
@@ -60,58 +67,71 @@
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/SGE.Application.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/ref/SGE.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/ref/SGE.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/refint/SGE.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/Debug/net8.0/refint/SGE.Application.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/SGE.Application.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/SGE.Application.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/SGE.Application.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/SGE.Application.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Application/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Application/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/Processes/ProcessResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/Processes/ProcessResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/bin/Debug/net8.0/SGE.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/bin/Debug/net8.0/SGE.Contracts.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/bin/Debug/net8.0/SGE.Contracts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/bin/Debug/net8.0/SGE.Contracts.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/SGE.Contracts.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/ref/SGE.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/ref/SGE.Contracts.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/refint/SGE.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/Debug/net8.0/refint/SGE.Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/SGE.Contracts.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/SGE.Contracts.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/SGE.Contracts.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/SGE.Contracts.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Contracts/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Contracts/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/Common/Models/AggregateRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/Common/Models/AggregateRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/Common/Models/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/Common/Models/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/Common/Models/ValueObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/Common/Models/ValueObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/DynamicTextAggregate/DynamicText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/DynamicTextAggregate/DynamicText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/DynamicTextAggregate/ValueObjects/DynamicTextId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/DynamicTextAggregate/ValueObjects/DynamicTextId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/Entities/Procedure.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/Entities/ProcessProcedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/Entities/ProcessProcedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/ProcedureAggregate/Procedure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/ProcedureAggregate/Procedure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/ProcedureAggregate/ValueObjects/ProcedureId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/ProcedureAggregate/ValueObjects/ProcedureId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/Entities/ProcessProcedure.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/Process.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/Process.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/SGE.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/SGE.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/ValueObjects/ProcessId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/ProcessAggregate/ValueObjects/ProcessId.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/TermAggregate/Interfaces/ITermsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/TermAggregate/Interfaces/ITermsRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/TermAggregate/Term.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/TermAggregate/Term.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/bin/Debug/net8.0/SGE.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/bin/Debug/net8.0/SGE.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/bin/Debug/net8.0/SGE.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/bin/Debug/net8.0/SGE.Domain.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/SGE.Domain.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/ref/SGE.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/ref/SGE.Domain.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/refint/SGE.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/Debug/net8.0/refint/SGE.Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/SGE.Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/SGE.Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/SGE.Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/SGE.Domain.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Domain/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Domain/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Common/Persistence/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Common/Persistence/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Common/Persistence/SoftDeleteInterceptor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Common/Persistence/SoftDeleteInterceptor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/DependencyInjection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/DynamicTexts/Persistence/DynamicTextConfigurations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/DynamicTexts/Persistence/DynamicTextConfigurations.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Migrations/20240804192726_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Migrations/20240804192726_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Migrations/20240805013755_AddDynamicTextTable.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Migrations/20240805013755_AddDynamicTextTable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Migrations/20240807025223_InitialMigratios.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Migrations/20240807025223_InitialMigratios.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Processes/Persistence/ProcedureConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Processes/Persistence/ProcedureConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Processes/Persistence/ProcedureConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Procedures/Persistence/ProcedureConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Processes/Persistence/ProcessConfigurations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Processes/Persistence/ProcessConfigurations.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Processes/Persistence/ProcessRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Processes/Persistence/ProcessRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/Seeders/ApplicationStatesSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/Seeders/ApplicationStatesSeeder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/TermsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/Terms/Persistence/TermsRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/bin/Debug/net8.0/SGE.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/bin/Debug/net8.0/SGE.Application.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/bin/Debug/net8.0/SGE.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/bin/Debug/net8.0/SGE.Application.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/bin/Debug/net8.0/SGE.Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/bin/Debug/net8.0/SGE.Domain.dll" afterDir="false" />
@@ -122,55 +142,40 @@
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/ref/SGE.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/ref/SGE.Infrastructure.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/refint/SGE.Infrastructure.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/Debug/net8.0/refint/SGE.Infrastructure.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/SGE.Infrastructure.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/SGE.Infrastructure.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/SGE.Infrastructure.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/SGE.Infrastructure.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/SGE.Infrastructure/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/bin/Debug/net8.0/CoverletSourceRootsMapping_SGE.Api.IntegrationTests" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/bin/Debug/net8.0/CoverletSourceRootsMapping_SGE.Api.IntegrationTests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/Debug/net8.0/SGE.Api.IntegrationTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/Debug/net8.0/SGE.Api.IntegrationTests.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/Debug/net8.0/SGE.Api.IntegrationTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/Debug/net8.0/SGE.Api.IntegrationTests.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/Debug/net8.0/SGE.Api.IntegrationTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/Debug/net8.0/SGE.Api.IntegrationTests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/SGE.Api.IntegrationTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/SGE.Api.IntegrationTests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Api.IntegrationTests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/bin/Debug/net8.0/CoverletSourceRootsMapping_SGE.Application.SubcutaneousTests" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/bin/Debug/net8.0/CoverletSourceRootsMapping_SGE.Application.SubcutaneousTests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/Debug/net8.0/SGE.Application.SubcutaneousTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/Debug/net8.0/SGE.Application.SubcutaneousTests.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/Debug/net8.0/SGE.Application.SubcutaneousTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/Debug/net8.0/SGE.Application.SubcutaneousTests.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/Debug/net8.0/SGE.Application.SubcutaneousTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/Debug/net8.0/SGE.Application.SubcutaneousTests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/SGE.Application.SubcutaneousTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/SGE.Application.SubcutaneousTests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.SubcutaneousTests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/bin/Debug/net8.0/CoverletSourceRootsMapping_SGE.Application.UnitTests" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/bin/Debug/net8.0/CoverletSourceRootsMapping_SGE.Application.UnitTests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/Debug/net8.0/SGE.Application.UnitTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/Debug/net8.0/SGE.Application.UnitTests.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/Debug/net8.0/SGE.Application.UnitTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/Debug/net8.0/SGE.Application.UnitTests.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/Debug/net8.0/SGE.Application.UnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/Debug/net8.0/SGE.Application.UnitTests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/SGE.Application.UnitTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/SGE.Application.UnitTests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Application.UnitTests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/bin/Debug/net8.0/CoverletSourceRootsMapping_SGE.Domain.UnitTests" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/bin/Debug/net8.0/CoverletSourceRootsMapping_SGE.Domain.UnitTests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/Debug/net8.0/SGE.Domain.UnitTests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/Debug/net8.0/SGE.Domain.UnitTests.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/Debug/net8.0/SGE.Domain.UnitTests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/Debug/net8.0/SGE.Domain.UnitTests.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/Debug/net8.0/SGE.Domain.UnitTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/Debug/net8.0/SGE.Domain.UnitTests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/SGE.Domain.UnitTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/SGE.Domain.UnitTests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SGE.Domain.UnitTests/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/TestCommon/obj/Debug/net8.0/TestCommon.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCommon/obj/Debug/net8.0/TestCommon.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/TestCommon/obj/Debug/net8.0/TestCommon.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCommon/obj/Debug/net8.0/TestCommon.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/TestCommon/obj/Debug/net8.0/TestCommon.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCommon/obj/Debug/net8.0/TestCommon.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCommon/obj/TestCommon.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCommon/obj/TestCommon.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCommon/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCommon/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCommon/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCommon/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/TestCommon/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCommon/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/TestCommon/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCommon/obj/rider.project.restore.info" afterDir="false" />
     </list>
@@ -197,6 +202,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Http/Authentication.Core/src/AuthenticationHandlerProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Http/Http.Extensions/src/ProblemDetailsServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Mvc/Mvc.ApiExplorer/src/DependencyInjection/EndpointMethodInfoApiExplorerServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Mvc/Mvc.Core/src/Infrastructure/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b8139c5ee58f1708b0e3368a1b241400edd6cbc4/src/Security/Authorization/Core/src/AuthorizeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/efcore/e017dc125bef2f604f85befd8ff27544a5a67c38/src/EFCore/Metadata/Builders/OwnedNavigationBuilder%60.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0c53ee5c91f047f387400d094b3581c4267420/1f/4721479b/ModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
@@ -213,6 +219,7 @@
   <component name="HttpClientSelectedEnvironments">
     <file url="file://$PROJECT_DIR$/requests/Processes/ListProcess.http" environment="dev" />
     <file url="file://$PROJECT_DIR$/requests/Tokens/GenerateToken.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/requests/Terms/ListTerms.http" environment="dev" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -222,34 +229,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.SGE.Api.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.CreateReminder | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.GenerateToken | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.ListProcess | #1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;rest.client.default.execution.environment&quot;: &quot;dev&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.SGE.Api.executor": "Run",
+    "HTTP Request.CreateReminder | #1.executor": "Run",
+    "HTTP Request.GenerateToken | #1.executor": "Run",
+    "HTTP Request.ListProcess | #1.executor": "Run",
+    "HTTP Request.ListTerms | #1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.45265588",
+    "git-widget-placeholder": "test__aggregate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rest.client.default.execution.environment": "dev",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\ingco\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\ingco\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\ingco\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\ingco\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\ingco\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\ingco\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.SGE.Api">
     <configuration name="SGE.Api" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/src/SGE.Api/bin/Debug/net8.0/SGE.Api.dll" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/src/SGE.Api/bin/Debug/net8.0/SGE.Api.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/SGE.Api" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -308,16 +317,21 @@
       <method v="2" />
     </configuration>
     <configuration name="ListProcess | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/processes/ListProcess.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ListTerms | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests/Terms/ListTerms.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue=".NET Project.SGE.Api" />
+      <item itemvalue="HTTP Request.ListTerms | #1" />
       <item itemvalue="HTTP Request.CreateReminder | #1" />
       <item itemvalue="HTTP Request.GenerateToken | #1" />
       <item itemvalue="HTTP Request.ListProcess | #1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.ListTerms | #1" />
         <item itemvalue="HTTP Request.ListProcess | #1" />
         <item itemvalue="HTTP Request.GenerateToken | #1" />
         <item itemvalue="HTTP Request.CreateReminder | #1" />
@@ -336,7 +350,8 @@
       <workItem from="1722812270782" duration="8502000" />
       <workItem from="1722861915393" duration="19893000" />
       <workItem from="1722946904008" duration="39476000" />
-      <workItem from="1722996915239" duration="3261000" />
+      <workItem from="1722996915239" duration="11649000" />
+      <workItem from="1723036234262" duration="25668000" />
     </task>
     <servers />
   </component>
@@ -404,5 +419,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#System.Collections.Generic.KeyValuePair`2" memberName="Value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

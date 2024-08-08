@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SGE.Application.Common.Interfaces;
 using SGE.Domain.ProcessAggregate.Interfaces;
+using SGE.Domain.TermAggregate.Interfaces;
 using SGE.Infrastructure.Common.Persistence;
 using SGE.Infrastructure.Processes.Persistence;
 using SGE.Infrastructure.Reminders.BackgroundServices;
@@ -15,6 +16,7 @@ using SGE.Infrastructure.Security;
 using SGE.Infrastructure.Security.TokenGenerator;
 using SGE.Infrastructure.Security.TokenValidation;
 using SGE.Infrastructure.Services;
+using SGE.Infrastructure.Terms.Persistence;
 using SGE.Infrastructure.Users.Persistence;
 
 namespace SGE.Infrastructure;
@@ -83,6 +85,7 @@ public static class DependencyInjection
             .AddInterceptors(new SoftDeleteInterceptor()));
 
         // services.AddScoped<IUnitOfWork<AppDbContext>, UnitOfWork<AppDbContext>>();
+        services.AddScoped<ITermsRepository, TermsRepository>();
         services.AddScoped<IProcessRepository, ProcessRepository>();
         services.AddScoped<IRemindersRepository, RemindersRepository>();
         services.AddScoped<IUsersRepository, UsersRepository>();

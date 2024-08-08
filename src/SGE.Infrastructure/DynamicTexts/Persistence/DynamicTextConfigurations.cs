@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 using SGE.Domain.DynamicTextAggregate;
 using SGE.Domain.DynamicTextAggregate.ValueObjects;
+using SGE.Domain.TermAggregate.ValueObjects;
 
 namespace SGE.Infrastructure.DynamicTexts.Persistence;
 

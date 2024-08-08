@@ -1,0 +1,7 @@
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.6.1",
+  "title": "No suitable constructor was found for entity type 'ProcessDto'. The following constructors had parameters that could not be bound to properties of the entity type: \r\n    Cannot bind 'Procedures' in 'ProcessDto(string Id, string Name, List<Procedure> Procedures)'\r\n    Cannot bind 'original' in 'ProcessDto(ProcessDto original)'\r\nNote that only mapped properties can be bound to constructor parameters. Navigations to related entities, including references to owned types, cannot be bound.",
+  "status": 500,
+  "detail": "No suitable constructor was found for entity type 'ProcessDto'. The following constructors had parameters that could not be bound to properties of the entity type: \r\n    Cannot bind 'Procedures' in 'ProcessDto(string Id, string Name, List<Procedure> Procedures)'\r\n    Cannot bind 'original' in 'ProcessDto(ProcessDto original)'\r\nNote that only mapped properties can be bound to constructor parameters. Navigations to related entities, including references to owned types, cannot be bound.",
+  "traceId": "00-bfb556dd8afe8d5c6eda9a99a188bac5-73f165f8684d1d68-00"
+}

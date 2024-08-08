@@ -11,7 +11,7 @@ public class ProcessMappingConfig : IRegister
     public void Register(TypeAdapterConfig config)
     {
         config.NewConfig<Process, ProcessResponse>()
-            .Map(dest => dest.Id, src => src.Id)
+            .Map(dest => dest.Id, src => src.Id.Value.ToString())
             .Map(dest => dest.Name, src => src.Name);
     }
 }

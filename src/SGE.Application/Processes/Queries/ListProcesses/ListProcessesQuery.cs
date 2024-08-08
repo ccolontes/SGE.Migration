@@ -1,5 +1,4 @@
 using ErrorOr;
-
 using MediatR;
 
 using SGE.Domain.ProcessAggregate;

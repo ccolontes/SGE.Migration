@@ -1,0 +1,8 @@
+{
+  "SGE.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api",
+  "SGE.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Application",
+  "SGE.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Contracts",
+  "SGE.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Domain",
+  "SGE.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Infrastructure",
+  "TestCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ingco\\Documents\\code\\SGE\\tests\\TestCommon"
+}

@@ -1,9 +1,7 @@
-using SGE.Domain.Common.Interfaces.Models;
-
 namespace SGE.Domain.Common.Models;
 
 public abstract class Entity<TId> : IEquatable<Entity<TId>>
-    where TId : ValueObject
+    where TId : notnull
 {
     public TId Id { get; protected set; }
 
