@@ -17,7 +17,9 @@ public class TermController(ISender mediator, IMapper mapper) : ApiController
        var query = request.Adapt<GetTermsByCodesQuery>();
        var response = await mediator.Send(query);
        return response.Match(
-           terms => Ok(mapper.Map<GetTermsByCodesResponse>(terms)),
+           terms => Ok(terms.ToDictionary(
+               x => x.Key,
+               x => x.Value.Select(mapper.Map<TermResponse>).ToList())),
            err => Problem(err));
    }
 }

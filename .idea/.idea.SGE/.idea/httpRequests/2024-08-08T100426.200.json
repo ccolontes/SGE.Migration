@@ -1,0 +1,203 @@
+{
+  "PERSONA_TIPO_JURIDICA": [],
+  "SOLICITUD_ESTADO": [
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_DEVOLUCIÓN_REQUERIMIENTO",
+      "name": "Devolución requerimiento",
+      "description": "El coordinador devuelve el requerimiento al evaluador para que vuelva a revisar",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_PENDIENTE_RADICACIÓN",
+      "name": "Pendiente Radicación",
+      "description": "Solicitud que no ha sido radicada",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_DESISTIDA_TÁCITAMENTE_PENDIENTE",
+      "name": "Desistida Tácitamente Pendiente",
+      "description": "La fecha limite de subsanación se venció y la ANE puede aumentar el plazo de subsanación",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_APROBADA",
+      "name": "Aprobada",
+      "description": "Solicitud aprobada",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_GENERANDO_RESOLUCIÓN",
+      "name": "Generando Resolución",
+      "description": "La solicitud fue aprobada por ambas entidades (MinTIC-ANE) y pasa al flujo de resolución",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_RECHAZADA_PENDIENTE",
+      "name": "Rechazada Pendiente",
+      "description": "Solicitud aprobada por la ANE (CT generado) y rechazada por MinTIC. Pendiente de devolver el CT",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_REQUERIDA",
+      "name": "Requerida",
+      "description": "Solicitud requerida",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_DESISTIDA",
+      "name": "Desistida",
+      "description": "Solicitud desistida por el operador",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_GENERANDO_OFICIO",
+      "name": "Generando Oficio",
+      "description": "La solicitud fue rechada por alguna de las dos entidades (MinTIC-ANE) y pasa al flujo de oficio",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_RECHAZO_ADMINISTRATIVO",
+      "name": "Rechazo Administrativo",
+      "description": "La solicitud se rechaza por cartera, garantías, RUTIC u otro motivo general",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_RECHAZO_EN_COORDINACIÓN",
+      "name": "Rechazo en coordinación",
+      "description": "El evaluador rechazo uno o más documentos y está pendiente la aprobación del rechazo por parte del coordinador",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_DEVOLUCIÓN_RESOLUCIÓN",
+      "name": "Devolución Resolución",
+      "description": "El proceso esta en el flujo de resolución y se devuelve a la ANE para volver a revisar",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_OFICIO_APROBADO",
+      "name": "Oficio Aprobado",
+      "description": "El oficio finaliza el flujo, es aprobado y se envia para firma electrónica",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_RESOLUCIÓN_APROBADA",
+      "name": "Resolución aprobada",
+      "description": "La resolución finaliza el flujo y se envia a IntegraTIC",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_SUBSANADA",
+      "name": "Subsanada",
+      "description": "El operador subsana los requerimientos",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_DESISTIDA_TACITAMENTE",
+      "name": "Desistida tacitamente",
+      "description": "Solicitud rechazada por no realizar la subsanación en el tiempo establecido",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_REQUERIMIENTO_EN_COORDINACIÓN",
+      "name": "Requerimiento en coordinación",
+      "description": "El evaluador requiere uno o más documentos y está pendiente la aprobación del requerimiento por parte del coordinador",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_RESOLUCIÓN_GENERADA",
+      "name": "Resolución Generada",
+      "description": "El proyector genera la resolución",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_RECHAZO_ADMINISTRATIVO_EN_COORDINACIÓN",
+      "name": "Rechazo Administrativo en coordinación",
+      "description": "El evaluador rechazo la solicitud por cartera, garantías, RUTIC u otro motivo general, y está pendiente la aprobación del rechazo por parte del coordinador",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_OFICIO_GENERADO",
+      "name": "Oficio Generado",
+      "description": "El proyector genera el oficio",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_EN_REVISION",
+      "name": "En revision",
+      "description": "Solicitud radicada y en flujo de revisión",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_RESUMEN_TÉCNICO_GENERADO",
+      "name": "Resumen Técnico Generado",
+      "description": "La ANE genera el resumen técnico",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_RECHAZADA",
+      "name": "Rechazada",
+      "description": "Solicitud rechaza",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_SUBSANACIÓN_POR_CAMPOS",
+      "name": "Subsanación por campos",
+      "description": "El operador realiza la subsanación del requerimiento por campos del anexo técnico realizado por la ANE",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_DESISTIDA_PENDIENTE",
+      "name": "Desistida Pendiente",
+      "description": "La solicitud fue aprobada por la ANE y genero CT, y el operador la desiste. Pendiente devolver el CT",
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "SOLICITUD_ESTADO_REQUERIMIENTO_POR_CAMPOS",
+      "name": "Requerimiento por campos",
+      "description": "La ANE realiza un requerimiento por campos del anexo técnico",
+      "slug": null
+    }
+  ],
+  "PERSONA_TIPO": [
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "PERSONA_TIPO_JURIDICA",
+      "name": "Juridica",
+      "description": null,
+      "slug": null
+    },
+    {
+      "id": "SGE.Domain.TermAggregate.ValueObjects.TermId",
+      "code": "PERSONA_TIPO_NATURAL",
+      "name": "Natural",
+      "description": null,
+      "slug": null
+    }
+  ]
+}

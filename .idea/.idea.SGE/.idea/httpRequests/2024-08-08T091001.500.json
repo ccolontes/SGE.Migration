@@ -1,0 +1,7 @@
+{
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.6.1",
+  "title": "Error while compiling\nsource=System.Collections.Generic.Dictionary`2[System.String,System.Collections.Generic.IReadOnlyList`1[SGE.Domain.TermAggregate.Term]]\ndestination=SGE.Contracts.Terms.GetTermsByCodesResponse\ntype=Map",
+  "status": 500,
+  "detail": "Error while compiling\nsource=System.Collections.Generic.Dictionary`2[System.String,System.Collections.Generic.IReadOnlyList`1[SGE.Domain.TermAggregate.Term]]\ndestination=SGE.Contracts.Terms.GetTermsByCodesResponse\ntype=Map",
+  "traceId": "00-8b39b0e749319f0f0aefed51e560dbcb-5d38a6761830238f-00"
+}

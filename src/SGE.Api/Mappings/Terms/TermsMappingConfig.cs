@@ -9,12 +9,9 @@ public class TermsMappingConfig : IRegister
 {
     public void Register(TypeAdapterConfig config)
     {
-        config.NewConfig<Dictionary<string, IReadOnlyList<Term>>, Dictionary<string, IReadOnlyList<TermResponse>>>()
+        config.NewConfig<Term, TermResponse>()
             .Map(
-                dest => dest,
-                src => src.ToDictionary(
-                    x => x.Key,
-                    x => x.Value.Select(y => y.Adapt<TermResponse>())
-                        .ToList()));
+                dest => dest.Id,
+                src => src.Id.Value.ToString());
     }
 }

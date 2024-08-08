@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SGE.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed0e1a7339851f35a2a7f79c8409b4e7e3648193")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c86aa8f1ba6bc51823a438f8ac9d6f80bba80879")]
 [assembly: System.Reflection.AssemblyProductAttribute("SGE.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SGE.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
