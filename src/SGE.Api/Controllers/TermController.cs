@@ -3,21 +3,21 @@ using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-using SGE.Application.Terms.Queries.ListTerms;
+using SGE.Application.Terms.Queries.GetTermsByCodes;
 using SGE.Contracts.Terms;
 
 namespace SGE.Api.Controllers;
 
 [Route("api/[controller]")]
-public class TermController(ISender mediator) : ApiController
+public class TermController(ISender mediator, IMapper mapper) : ApiController
 {
-   [HttpPost("GetTerms", Name = "GetTerms")]
-   public async Task<IActionResult> GetTerms(GetTermsRequest request)
+   [HttpPost("terms_by_codes", Name = "terms_by_codes")]
+   public async Task<IActionResult> GetTermsByCodes(GetTermsRequest request)
    {
-       var query = request.Adapt<ListTermsQuery>();
+       var query = request.Adapt<GetTermsByCodesQuery>();
        var response = await mediator.Send(query);
        return response.Match(
-           terms => Ok(terms.ConvertAll(term => term.Adapt<TermResponse>())),
+           terms => Ok(mapper.Map<GetTermsByCodesResponse>(terms)),
            err => Problem(err));
    }
 }

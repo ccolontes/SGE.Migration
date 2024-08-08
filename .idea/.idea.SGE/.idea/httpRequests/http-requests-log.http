@@ -1,3 +1,184 @@
+POST http://localhost:5000/api/term/terms_by_codes
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+<> 2024-08-07T211539.500.json
+
+###
+
+POST http://localhost:5000/api/term/terms_by_codes
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+<> 2024-08-07T211111.500.json
+
+###
+
+POST http://localhost:5000/api/term/get_terms_by_codes
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+###
+
+POST http://localhost:5000/api/term/getterms
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+###
+
+POST http://localhost:5000/api/term/getterms
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+###
+
+POST http://localhost:5000/api/term/getterms
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+###
+
+POST http://localhost:5000/api/term/getterms
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+<> 2024-08-07T204920.500.json
+
+###
+
+POST http://localhost:5000/api/term/getterms
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+<> 2024-08-07T195447.404.json
+
+###
+
+POST http://localhost:5000/api/terms/getterms
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "codes": ["PERSONA_TIPO_JURIDICA", "SOLICITUD_ESTADO", "PERSONA_TIPO"]
+}
+
+###
+
+GET http://localhost:5000/api/terms/list
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:5000/api/Process/processes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTGlvciIsImZhbWlseV9uYW1lIjoiRGFnYW4iLCJlbWFpbCI6Imxpb3JAZGFnYW4uY29tIiwiaWQiOiJhYWU5M2JmNS05ZTNjLTQ3YjMtYWFjZS0zMDM0NjUzYjZiYjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbInNldDpyZW1pbmRlciIsImdldDpyZW1pbmRlciIsImRpc21pc3M6cmVtaW5kZXIiLCJkZWxldGU6cmVtaW5kZXIiLCJjcmVhdGU6c3Vic2NyaXB0aW9uIiwiZGVsZXRlOnN1YnNjcmlwdGlvbiIsImdldDpzdWJzY3JpcHRpb24iXSwiZXhwIjoxNzIyODExNjM3LCJpc3MiOiJTR0UiLCJhdWQiOiJTR0UifQ.NRs5opEvBCt4U0wTg24eFZ1JpO2FywrQKs5QEZkw-go
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-08-07T182108.200.json
+
+###
+
+GET http://localhost:5000/api/Process/processes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTGlvciIsImZhbWlseV9uYW1lIjoiRGFnYW4iLCJlbWFpbCI6Imxpb3JAZGFnYW4uY29tIiwiaWQiOiJhYWU5M2JmNS05ZTNjLTQ3YjMtYWFjZS0zMDM0NjUzYjZiYjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbInNldDpyZW1pbmRlciIsImdldDpyZW1pbmRlciIsImRpc21pc3M6cmVtaW5kZXIiLCJkZWxldGU6cmVtaW5kZXIiLCJjcmVhdGU6c3Vic2NyaXB0aW9uIiwiZGVsZXRlOnN1YnNjcmlwdGlvbiIsImdldDpzdWJzY3JpcHRpb24iXSwiZXhwIjoxNzIyODExNjM3LCJpc3MiOiJTR0UiLCJhdWQiOiJTR0UifQ.NRs5opEvBCt4U0wTg24eFZ1JpO2FywrQKs5QEZkw-go
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-08-07T181524.200.json
+
+###
+
+GET http://localhost:5000/api/Process/processes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTGlvciIsImZhbWlseV9uYW1lIjoiRGFnYW4iLCJlbWFpbCI6Imxpb3JAZGFnYW4uY29tIiwiaWQiOiJhYWU5M2JmNS05ZTNjLTQ3YjMtYWFjZS0zMDM0NjUzYjZiYjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbInNldDpyZW1pbmRlciIsImdldDpyZW1pbmRlciIsImRpc21pc3M6cmVtaW5kZXIiLCJkZWxldGU6cmVtaW5kZXIiLCJjcmVhdGU6c3Vic2NyaXB0aW9uIiwiZGVsZXRlOnN1YnNjcmlwdGlvbiIsImdldDpzdWJzY3JpcHRpb24iXSwiZXhwIjoxNzIyODExNjM3LCJpc3MiOiJTR0UiLCJhdWQiOiJTR0UifQ.NRs5opEvBCt4U0wTg24eFZ1JpO2FywrQKs5QEZkw-go
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-08-07T170415.500.json
+
+###
+
+GET http://localhost:5000/api/Process/processes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTGlvciIsImZhbWlseV9uYW1lIjoiRGFnYW4iLCJlbWFpbCI6Imxpb3JAZGFnYW4uY29tIiwiaWQiOiJhYWU5M2JmNS05ZTNjLTQ3YjMtYWFjZS0zMDM0NjUzYjZiYjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbInNldDpyZW1pbmRlciIsImdldDpyZW1pbmRlciIsImRpc21pc3M6cmVtaW5kZXIiLCJkZWxldGU6cmVtaW5kZXIiLCJjcmVhdGU6c3Vic2NyaXB0aW9uIiwiZGVsZXRlOnN1YnNjcmlwdGlvbiIsImdldDpzdWJzY3JpcHRpb24iXSwiZXhwIjoxNzIyODExNjM3LCJpc3MiOiJTR0UiLCJhdWQiOiJTR0UifQ.NRs5opEvBCt4U0wTg24eFZ1JpO2FywrQKs5QEZkw-go
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.1.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-08-07T091819.200.json
+
+###
+
 GET http://localhost:5000/api/Process/processes
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTGlvciIsImZhbWlseV9uYW1lIjoiRGFnYW4iLCJlbWFpbCI6Imxpb3JAZGFnYW4uY29tIiwiaWQiOiJhYWU5M2JmNS05ZTNjLTQ3YjMtYWFjZS0zMDM0NjUzYjZiYjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsInBlcm1pc3Npb25zIjpbInNldDpyZW1pbmRlciIsImdldDpyZW1pbmRlciIsImRpc21pc3M6cmVtaW5kZXIiLCJkZWxldGU6cmVtaW5kZXIiLCJjcmVhdGU6c3Vic2NyaXB0aW9uIiwiZGVsZXRlOnN1YnNjcmlwdGlvbiIsImdldDpzdWJzY3JpcHRpb24iXSwiZXhwIjoxNzIyODExNjM3LCJpc3MiOiJTR0UiLCJhdWQiOiJTR0UifQ.NRs5opEvBCt4U0wTg24eFZ1JpO2FywrQKs5QEZkw-go

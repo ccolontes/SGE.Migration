@@ -1,22 +1,24 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 using SGE.Domain.Common.Models;
 using SGE.Domain.ProcedureAggregate.ValueObjects;
-using SGE.Domain.ProcessAggregate;
-using SGE.Domain.ProcessAggregate.ValueObjects;
 
 namespace SGE.Domain.ProcedureAggregate;
 
-public sealed class Procedure : AggregateRoot<ProcedureId, Guid>
+public sealed class Procedure : AggregateRoot<ProcedureId>
 {
-    private readonly List<ProcessId> _processesIds = [];
     public string Name { get; private set; }
 
-    public Procedure(ProcedureId id, string name)
+    private readonly List<ProcedureId> _proceduresIds = [];
+
+    [NotMapped]
+    public IReadOnlyList<ProcedureId> ProceduresIds => _proceduresIds.AsReadOnly();
+
+    private Procedure(ProcedureId id, string name)
     {
         this.Id = id;
         this.Name = name;
     }
-
-    public IReadOnlyList<ProcessId> ProcessesIds => _processesIds.AsReadOnly();
 
     public static Procedure Create(Guid id, string name)
     {

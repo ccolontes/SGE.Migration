@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SGE.Api.Controllers;
-
 public class ErrorsController : ApiController
 {
     [Route("/error")]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public IActionResult Error()
     {
         var exception = HttpContext.Features.Get<IExceptionHandlerFeature>()?.Error;

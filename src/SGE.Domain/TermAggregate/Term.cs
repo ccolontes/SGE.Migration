@@ -4,14 +4,14 @@ using SGE.Domain.TermAggregate.ValueObjects;
 
 namespace SGE.Domain.TermAggregate;
 
-public class Term : AggregateRoot<TermId, Ulid>, ISoftDeletable
+public class Term : AggregateRoot<TermId>, ISoftDeletable
 {
     public string Code { get; private set; }
     public string Name { get; private set; }
     public string? Description { get; private set; }
     public string? Slug { get; set; }
 
-    public AggregateRootId<Ulid>? ParentId { get; set; }
+    public TermId? ParentId { get; set; }
     public Term? Parent { get; set; }
 
     private List<Term> _terms = new();

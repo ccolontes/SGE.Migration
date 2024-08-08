@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ingco\\Documents\\code\\SGE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|c:\\users\\ingco\\documents\\code\\sge\\src\\sge.api\\controllers\\processcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|solutionrelative:src\\sge.api\\controllers\\processcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D84EEE6-905F-4356-B927-60F2686406C9}|src\\SGE.Infrastructure\\SGE.Infrastructure.csproj|c:\\users\\ingco\\documents\\code\\sge\\src\\sge.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D84EEE6-905F-4356-B927-60F2686406C9}|src\\SGE.Infrastructure\\SGE.Infrastructure.csproj|solutionrelative:src\\sge.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{387688C4-17C9-4BDC-A144-4A53CD73C931}|src\\SGE.Application\\SGE.Application.csproj|c:\\users\\ingco\\documents\\code\\sge\\src\\sge.application\\processes\\queries\\listprocesses\\listprocessesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{387688C4-17C9-4BDC-A144-4A53CD73C931}|src\\SGE.Application\\SGE.Application.csproj|solutionrelative:src\\sge.application\\processes\\queries\\listprocesses\\listprocessesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|c:\\users\\ingco\\documents\\code\\sge\\src\\sge.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|solutionrelative:src\\sge.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|c:\\users\\ingco\\documents\\code\\sge\\src\\sge.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|solutionrelative:src\\sge.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|c:\\users\\ingco\\documents\\code\\sge\\src\\sge.api\\controllers\\processcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B9F7D22-2A37-4EB6-A410-32BA01213D2A}|src\\SGE.Api\\SGE.Api.csproj|solutionrelative:src\\sge.api\\controllers\\processcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,28 +31,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProcessController.cs",
-              "DocumentMoniker": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\Controllers\\ProcessController.cs",
-              "RelativeDocumentMoniker": "src\\SGE.Api\\Controllers\\ProcessController.cs",
-              "ToolTip": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\Controllers\\ProcessController.cs",
-              "RelativeToolTip": "src\\SGE.Api\\Controllers\\ProcessController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\SGE.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\SGE.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAkwGkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T22:56:46.182Z",
+              "WhenOpened": "2024-08-08T00:39:05.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ListProcessesQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Application\\Processes\\Queries\\ListProcesses\\ListProcessesQueryHandler.cs",
-              "RelativeDocumentMoniker": "src\\SGE.Application\\Processes\\Queries\\ListProcesses\\ListProcessesQueryHandler.cs",
-              "ToolTip": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Application\\Processes\\Queries\\ListProcesses\\ListProcessesQueryHandler.cs",
-              "RelativeToolTip": "src\\SGE.Application\\Processes\\Queries\\ListProcesses\\ListProcessesQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswA0AAAAAAAAA",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\SGE.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\SGE.Api\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-08T00:38:28.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\SGE.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\appsettings.json",
+              "RelativeToolTip": "src\\SGE.Api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-08T00:38:20.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProcessController.cs",
+              "DocumentMoniker": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\Controllers\\ProcessController.cs",
+              "RelativeDocumentMoniker": "src\\SGE.Api\\Controllers\\ProcessController.cs",
+              "ToolTip": "C:\\Users\\ingco\\Documents\\code\\SGE\\src\\SGE.Api\\Controllers\\ProcessController.cs",
+              "RelativeToolTip": "src\\SGE.Api\\Controllers\\ProcessController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxYAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T22:22:19.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-04T22:56:46.182Z"
             }
           ]
         }

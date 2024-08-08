@@ -3,11 +3,12 @@ using ErrorOr;
 using SGE.Domain.Common.Interfaces.Persistence;
 using SGE.Domain.Common.Models;
 using SGE.Domain.DynamicTextAggregate.ValueObjects;
+using SGE.Domain.TermAggregate.ValueObjects;
 
 namespace SGE.Domain.DynamicTextAggregate;
 
 public sealed class DynamicText
-    : AggregateRoot<DynamicTextId, Guid>, ISoftDeletable
+    : AggregateRoot<DynamicTextId>, ISoftDeletable
 {
     public string Code { get; set; }
     public string Text { get; set; }

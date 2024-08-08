@@ -8,9 +8,11 @@ namespace SGE.Infrastructure.Terms.Persistence;
 
 public class TermsRepository(AppDbContext context) : ITermsRepository
 {
-    public async Task<IReadOnlyDictionary<string, IReadOnlyList<Term>>> GetTermsByCodesAsync(List<string> codes, CancellationToken cancellationToken)
+    public async Task<Dictionary<string, IReadOnlyList<Term>>> GetTermsByCodesAsync(List<string> codes, CancellationToken cancellationToken)
     {
-        var list = await context.Terms.Where(x => codes.Contains(x.Code)).AsNoTracking().ToListAsync(cancellationToken: cancellationToken);
-        return list.ToDictionary(x => x.Code, x => x.Terms).AsReadOnly();
+        var results = await context.Terms.Include(x => x.Terms)
+            .Where(x => codes.Contains(x.Code))
+            .ToListAsync(cancellationToken: cancellationToken);
+        return results.ToDictionary(x => x.Code, x => x.Terms);
     }
 }

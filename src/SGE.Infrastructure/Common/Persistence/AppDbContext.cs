@@ -6,11 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using SGE.Domain.Common;
 using SGE.Domain.DynamicTextAggregate;
 using SGE.Domain.ProcedureAggregate;
-using SGE.Domain.ProcessAggregate;
 using SGE.Domain.Reminders;
 using SGE.Domain.TermAggregate;
 using SGE.Domain.Users;
 using SGE.Infrastructure.Common.Middleware;
+
+using Process = SGE.Domain.ProcessAggregate.Process;
 
 namespace SGE.Infrastructure.Common.Persistence;
 
@@ -21,6 +22,7 @@ public class AppDbContext(DbContextOptions options, IHttpContextAccessor _httpCo
     public DbSet<User> Users { get; set; } = null!;
 
     public DbSet<Process> Processes { get; set; } = null!;
+    public DbSet<Procedure> Procedures { get; set; } = null!;
 
     public DbSet<DynamicText> DynamicTexts { get; set; } = null!;
 

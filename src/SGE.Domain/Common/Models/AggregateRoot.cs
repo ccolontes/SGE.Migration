@@ -1,12 +1,8 @@
-using SGE.Domain.Common.Interfaces.Models;
-
 namespace SGE.Domain.Common.Models;
 
-public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
-    where TId : AggregateRootId<TIdType>
+public abstract class AggregateRoot<TId> : Entity<TId>
+    where TId : notnull
 {
-    public new AggregateRootId<TIdType> Id { get; protected set; }
-
     protected AggregateRoot(TId id)
     {
         Id = id;
